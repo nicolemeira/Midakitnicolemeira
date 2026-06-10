@@ -4,603 +4,590 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nicole Meira | Influenciadora Digital</title>
+    <title>Nicole Meira | Mídia Kit Premium</title>
 
-    <meta name="description" content="Nicole Meira - Influenciadora Digital especializada em Lifestyle, Moda, Beleza, Viagens, Eventos e Vida Cristã.">
-    <meta name="keywords" content="Nicole Meira, Influenciadora, Moda, Lifestyle, Beleza, Viagens">
+    <meta name="description" content="Mídia Kit Oficial de Nicole Meira. Conectando marcas ao público de forma autêntica, estratégica e humanizada.">
     <meta name="author" content="Nicole Meira">
 
-    <meta property="og:title" content="Nicole Meira">
-    <meta property="og:description" content="Conectando marcas ao público de forma autêntica, estratégica e humanizada.">
-    <meta property="og:image" content="https://i.ibb.co/7td57FTk/IMG-1759.png">
-    <meta property="og:type" content="website">
-
+    <!-- Tailwind & Fontes de Luxo -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: #fff; overflow-x: hidden; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-        .hero-gradient { background: linear-gradient(135deg, #ffffff 0%, #fff7f8 25%, #fdf2f5 50%, #fff8f5 100%); }
-        .glass { background: rgba(255, 255, 255, .55); backdrop-filter: blur(18px); border: 1px solid rgba(255, 255, 255, .6); }
-        .rose-border { border: 1px solid rgba(233, 188, 190, .5); }
-        .gold-text { background: linear-gradient(90deg, #C49A6C, #E8C9A0, #B88654); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .shadow-luxury { box-shadow: 0 10px 40px rgba(0, 0, 0, .06), 0 2px 10px rgba(212, 175, 55, .10); }
-        .section-title { font-size: clamp(2rem, 4vw, 4rem); font-weight: 700; line-height: 1.1; }
-        .fade-up { opacity: 0; transform: translateY(40px); transition: all .9s ease; }
+        body { font-family: 'Inter', sans-serif; background: #ffffff; color: #333333; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; letter-spacing: -0.02em; }
+        
+        /* Paleta de Cores Premium (Rosa Claro, Rosé Gold, Branco e Dourado) */
+        .bg-premium-light { background: linear-gradient(180deg, #fffcfd 0%, #fff5f6 50%, #ffffff 100%); }
+        .bg-luxury-gold { background: linear-gradient(135deg, #dfba91 0%, #e8c9a0 50%, #c49a6c 100%); }
+        .glass { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.6); }
+        
+        .rose-gold-text { background: linear-gradient(90deg, #b88654, #e8c9a0, #b88654); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .border-rose-light { border-color: rgba(24bcaf, 188, 190, 0.25); }
+        .shadow-premium { box-shadow: 0 20px 50px rgba(223, 186, 145, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02); }
+        
+        /* Efeitos Visuais */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: all 1s ease; }
         .fade-up.show { opacity: 1; transform: translateY(0); }
-        .floating-whatsapp { position: fixed; bottom: 25px; right: 25px; z-index: 999; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        .hero-image { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
-        .metric-card:hover { transform: translateY(-6px); transition: .4s; }
-        .service-card:hover { transform: translateY(-10px); transition: .4s; }
-        .plan-highlight { transform: scale(1.05); border: 2px solid #D4AF37; }
-        .instagram-card:hover { transform: scale(1.03); transition: .4s; }
-        .glow { box-shadow: 0 0 20px rgba(233, 188, 190, .3), 0 0 40px rgba(233, 188, 190, .2); }
+        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; z-index: 9999; animation: pulse 2.5s infinite; }
+        
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); } 70% { transform: scale(1.06); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); } 100% { transform: scale(1); } }
+        .img-premium { filter: contrast(1.02) brightness(1.01); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .img-premium:hover { transform: scale(1.03); }
     </style>
 </head>
 
-<body>
+<body class="bg-premium-light">
 
-    <!-- WHATSAPP FIXO -->
-    <a href="https://wa.me/5521982898660" target="_blank" class="floating-whatsapp bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5521982898660" target="_blank" class="floating-whatsapp bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all" aria-label="Contato via WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 8.003 0C3.58 0 0 3.58 0 8c0 1.409.368 2.785 1.066 4L0 16l4.114-1.05A7.96 7.96 0 0 0 8.003 16c4.423 0 8.003-3.58 8.003-8a7.95 7.95 0 0 0-2.405-5.674z"/>
         </svg>
     </a>
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 w-full z-50">
-        <div class="glass">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <h2 class="text-2xl font-bold gold-text">Nicole Meira</h2>
-                <div class="hidden md:flex gap-8 text-sm">
-                    <a href="#sobre" class="hover:text-pink-500">Sobre</a>
-                    <a href="#metricas" class="hover:text-pink-500">Métricas</a>
-                    <a href="#publico" class="hover:text-pink-500">Público</a>
-                    <a href="#instagram" class="hover:text-pink-500">Instagram</a>
-                    <a href="#contato" class="hover:text-pink-500">Contato</a>
+    <!-- NAVEGAÇÃO CLEAN -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="glass border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+                <h2 class="text-2xl font-semibold tracking-wide uppercase text-gray-800">Nicole Meira</h2>
+                <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest font-medium text-gray-500">
+                    <a href="#sobre" class="hover:text-amber-600 transition-colors">Sobre</a>
+                    <a href="#metricas" class="hover:text-amber-600 transition-colors">Métricas</a>
+                    <a href="#audiência" class="hover:text-amber-600 transition-colors">Público</a>
+                    <a href="#instagram" class="hover:text-amber-600 transition-colors">Feed</a>
+                    <a href="#investimentos" class="hover:text-amber-600 transition-colors">Valores</a>
+                    <a href="#marcas" class="hover:text-amber-600 transition-colors">Parceiros</a>
+                    <a href="#contato" class="hover:text-amber-600 transition-colors">Contato</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0">
-            <div class="absolute top-20 left-20 w-72 h-72 bg-pink-100 rounded-full blur-3xl opacity-40"></div>
-            <div class="absolute bottom-20 right-20 w-96 h-96 bg-yellow-100 rounded-full blur-3xl opacity-30"></div>
+    <!-- HERO PRINCIPAL -->
+    <section class="min-h-screen flex items-center pt-24 pb-16 relative bg-white overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-[#fff0f2] rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[45vw] h-[45vw] bg-[#fff6f0] rounded-full blur-[120px]"></div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            <div class="fade-up">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm font-semibold">Influenciadora Digital</span>
-                <h1 class="text-6xl md:text-7xl font-bold mt-6 leading-tight">Nicole <span class="gold-text">Meira</span></h1>
-                <p class="text-lg text-gray-600 mt-8">Lifestyle • Moda • Beleza • Viagens • Eventos • Vida Cristã</p>
-                <p class="mt-8 text-gray-600 leading-relaxed max-w-xl">Conectando marcas ao público de forma autêntica, estratégica e humanizada, criando experiências que geram identificação, confiança e resultados.</p>
+        
+        <div class="max-w-7xl mx-auto px-8 w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 fade-up">
+                <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-4">Mídia Kit Oficial</span>
+                <h1 class="text-6xl md:text-8xl font-bold text-gray-900 leading-none">Nicole <br><span class="rose-gold-text italic font-normal">Meira</span></h1>
+                <p class="text-sm uppercase tracking-widest text-gray-400 mt-6 font-medium">Lifestyle • Moda • Viagens • Vida Cristã • Eventos • Beleza</p>
+                <div class="w-16 h-[2px] bg-amber-300 my-8"></div>
+                <p class="text-gray-600 leading-relaxed max-w-xl text-base md:text-lg font-light">
+                    Criando conexões estéticas, narrativas autênticas e gerando desejo através de um posicionamento elegante e humanizado diretamente de Guarapuava, Paraná.
+                </p>
+                
                 <div class="flex flex-wrap gap-4 mt-10">
-                    <a href="https://wa.me/5521982898660" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-pink-300 to-amber-200 text-white font-semibold shadow-luxury">Solicitar Proposta</a>
-                    <a href="#investimentos" class="px-8 py-4 rounded-full glass font-semibold">Ver Mídia Kit</a>
+                    <a href="https://wa.me/5521982898660" target="_blank" class="px-10 py-4 rounded-full bg-luxury-gold text-white text-xs uppercase tracking-widest font-semibold shadow-premium hover:opacity-90 transition-opacity">Iniciar Parceria</a>
+                    <a href="#investimentos" class="px-10 py-4 rounded-full border border-gray-200 text-xs uppercase tracking-widest font-semibold hover:bg-gray-50 transition-colors">Tabela de Investimento</a>
                 </div>
-                <div class="mt-12 flex gap-8">
+                
+                <!-- Micro Métricas em Destaque -->
+                <div class="mt-16 grid grid-cols-3 gap-6 border-t border-gray-100 pt-8 max-w-lg">
                     <div>
-                        <h3 class="text-3xl font-bold gold-text">93K+</h3>
-                        <p class="text-gray-500">Seguidores</p>
-                    </div>
-                    <div>
-                        <h3 class="text-3xl font-bold gold-text">400K+</h3>
-                        <p class="text-gray-500">Alcance mensal</p>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800">93.4K</h3>
+                        <p class="text-xs tracking-wider text-gray-400 uppercase mt-1">Seguidores</p>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold gold-text">30K+</h3>
-                        <p class="text-gray-500">Views Reels</p>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800">400K</h3>
+                        <p class="text-xs tracking-wider text-gray-400 uppercase mt-1">Alcance Mensal</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800">30K</h3>
+                        <p class="text-xs tracking-wider text-gray-400 uppercase mt-1">Média Reels</p>
                     </div>
                 </div>
             </div>
-            <!-- FOTO PRINCIPAL -->
-            <div class="fade-up">
-                <div class="relative">
-                    <div class="absolute -inset-5 rounded-[40px] bg-gradient-to-r from-pink-200 via-amber-100 to-pink-100 blur-xl opacity-60"></div>
-                    <div class="relative">
-                        <img src="https://i.ibb.co/7td57FTk/IMG-1759.png" alt="Nicole Meira" class="hero-image rounded-[40px] shadow-2xl w-full max-w-xl mx-auto border-[6px] border-white" />
+            
+            <!-- Foto Principal Fixada (Imagem 1) -->
+            <div class="lg:col-span-5 fade-up flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute -inset-4 bg-[#fff3f4] rounded-[40px] -rotate-2 scale-95 opacity-60"></div>
+                    <div class="relative bg-white p-3 rounded-[35px] shadow-premium border border-gray-100">
+                        <img src="https://i.ibb.co/9m9h9YXq/image.png" alt="Nicole Meira" class="img-premium rounded-[26px] w-full object-cover aspect-[4/5]" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="py-32">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="fade-up">
-                    <div class="relative">
-                        <div class="absolute -inset-4 rounded-[35px] bg-gradient-to-r from-pink-200 to-amber-100 blur-xl opacity-50"></div>
-                        <img src="https://i.ibb.co/7NTyVWrP/IMG-1602.jpg" alt="Nicole Meira" class="relative rounded-[35px] shadow-2xl border-[5px] border-white" />
+    <!-- APRESENTAÇÃO / SOBRE -->
+    <section id="sobre" class="py-32 bg-white border-t border-gray-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <!-- Imagem Secundária (Imagem 2) -->
+                <div class="lg:col-span-5 order-2 lg:order-1 fade-up">
+                    <div class="relative max-w-sm mx-auto">
+                        <div class="absolute inset-0 bg-[#fbf5f1] rounded-[200px] rotate-6 scale-105 opacity-70"></div>
+                        <img src="https://i.ibb.co/YT2B0nLs/image.png" alt="Nicole Meira Estilo" class="relative rounded-[200px] border-4 border-white shadow-2xl w-full object-cover aspect-[3/4]" />
                     </div>
                 </div>
-                <div class="fade-up">
-                    <span class="uppercase tracking-[5px] text-pink-400 text-sm">Sobre Mim</span>
-                    <h2 class="section-title mt-4">Elegância, Autenticidade e Conexão</h2>
-                    <p class="mt-8 text-gray-600 leading-relaxed text-lg">Sou Nicole Meira, criadora de conteúdo digital apaixonada por compartilhar experiências reais, estilo de vida, moda, beleza, viagens e momentos especiais. Meu objetivo é conectar marcas ao público de forma genuína, gerando confiança, identificação e resultados.</p>
-                    <div class="grid grid-cols-2 gap-6 mt-10">
-                        <div class="glass rounded-3xl p-6">
-                            <h3 class="font-bold text-xl">Lifestyle</h3>
-                            <p class="text-gray-500 mt-2">Conteúdo autêntico e inspirador.</p>
+                
+                <div class="lg:col-span-7 order-1 lg:order-2 fade-up">
+                    <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Apresentação</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">Posicionamento que transforma atenção em desejo.</h2>
+                    <p class="mt-8 text-gray-600 font-light leading-relaxed text-lg">
+                        “Sou Nicole Meira, criadora de conteúdo digital com mais de 93 mil seguidores. Produzo conteúdos autênticos sobre lifestyle, moda, viagens, eventos e vida cristã, conectando marcas ao meu público de forma natural, estratégica e humanizada. Ao longo da minha trajetória já realizei campanhas para dezenas de empresas locais e nacionais.”
+                    </p>
+                    
+                    <div class="mt-10 grid grid-cols-2 gap-4 text-sm text-gray-600">
+                        <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Influência Regional Forte</div>
+                        <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Produção Estética Premium</div>
+                        <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Parcerias de Longo Prazo</div>
+                        <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Audiência Qualificada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DADOS DO PERFIL / MÉTRICAS -->
+    <section id="metricas" class="py-32 bg-[#fffbfc] border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-2xl mx-auto fade-up">
+                <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Dados Analíticos</span>
+                <h2 class="text-4xl font-bold text-gray-900">Métricas de Real Engajamento</h2>
+                <p class="text-gray-500 font-light mt-4">Números auditados diretamente do painel profissional do Instagram.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8 mt-20">
+                <div class="glass rounded-3xl p-8 shadow-premium text-center border border-white">
+                    <h3 class="text-5xl font-bold text-gray-900 tracking-tight">93.4K</h3>
+                    <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mt-3">Seguidores Ativos</p>
+                </div>
+                <div class="glass rounded-3xl p-8 shadow-premium text-center border border-white">
+                    <h3 class="text-5xl font-bold text-gray-900 tracking-tight">400K</h3>
+                    <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mt-3">Alcance Mensal Médio</p>
+                </div>
+                <div class="glass rounded-3xl p-8 shadow-premium text-center border border-white">
+                    <h3 class="text-5xl font-bold text-gray-900 tracking-tight">3K</h3>
+                    <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mt-3">Visualizações Stories</p>
+                </div>
+                <div class="glass rounded-3xl p-8 shadow-premium text-center border border-white">
+                    <h3 class="text-5xl font-bold text-gray-900 tracking-tight">30K</h3>
+                    <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mt-3">Média Views Reels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIÊNCIA / PÚBLICO -->
+    <section id="audiência" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-6 fade-up">
+                    <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Demografia</span>
+                    <h2 class="text-4xl font-bold text-gray-900 leading-tight">Um público maduro, qualificado e pronto para o consumo</h2>
+                    <p class="mt-6 text-gray-600 font-light leading-relaxed">
+                        A audiência é majoritariamente composta por mulheres em sua fase mais ativa de consumo, apresentando excelente fit com marcas de moda, clínicas de estética, produtos de beleza e experiências de estilo de vida de alto padrão.
+                    </p>
+                    
+                    <div class="mt-10 space-y-6">
+                        <div>
+                            <div class="flex justify-between text-xs uppercase tracking-wider font-semibold text-gray-600 mb-2">
+                                <span>Mulheres</span><span>78.3%</span>
+                            </div>
+                            <div class="w-full h-[6px] bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-pink-300 to-pink-400 rounded-full" style="width: 78.3%"></div>
+                            </div>
                         </div>
-                        <div class="glass rounded-3xl p-6">
-                            <h3 class="font-bold text-xl">Moda & Beleza</h3>
-                            <p class="text-gray-500 mt-2">Tendências, estilo e autoestima.</p>
+                        <div>
+                            <div class="flex justify-between text-xs uppercase tracking-wider font-semibold text-gray-600 mb-2">
+                                <span>Homens</span><span>21.7%</span>
+                            </div>
+                            <div class="w-full h-[6px] bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-amber-200 to-amber-300 rounded-full" style="width: 21.7%"></div>
+                            </div>
                         </div>
-                        <div class="glass rounded-3xl p-6">
-                            <h3 class="font-bold text-xl">Viagens</h3>
-                            <p class="text-gray-500 mt-2">Experiências memoráveis.</p>
-                        </div>
-                        <div class="glass rounded-3xl p-6">
-                            <h3 class="font-bold text-xl">Eventos</h3>
-                            <p class="text-gray-500 mt-2">Cobertura profissional.</p>
-                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 fade-up glass p-8 rounded-[35px] shadow-premium border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">Principais Faixas Etárias</h3>
+                    <div class="relative aspect-[4/3] w-full">
+                        <canvas id="ageChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MÉTRICAS -->
-    <section id="metricas" class="py-32 bg-[#fcfafb]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center fade-up">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Resultados</span>
-                <h2 class="section-title mt-4">Métricas que Geram Valor</h2>
+    <!-- WIDGET INTEGRADO INSTAGRAM -->
+    <section id="instagram" class="py-32 bg-[#faf6f7] border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-xl mx-auto mb-16 fade-up">
+                <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Feed do Instagram</span>
+                <h2 class="text-4xl font-bold text-gray-900">Estética em Tempo Real</h2>
             </div>
-            <div class="grid md:grid-cols-4 gap-8 mt-16">
-                <div class="metric-card glass rounded-3xl p-8 text-center">
-                    <h3 class="counter text-5xl font-bold gold-text" data-target="93">0</h3>
-                    <p class="mt-3 text-gray-500">Mil Seguidores</p>
+            
+            <div class="fade-up shadow-premium rounded-3xl overflow-hidden bg-white p-4 border border-gray-100">
+                <div class="elfsight-app-f396438f-2406-4d08-a5e2-c104283d573d" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS OFERECIDOS -->
+    <section id="servicos" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-xl mx-auto mb-20 fade-up">
+                <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Formatos</span>
+                <h2 class="text-4xl font-bold text-gray-900">Soluções Multicanais</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
+                <div class="p-8 border border-gray-100 rounded-3xl bg-white shadow-premium transition-all hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-2xl bg-[#fff0f2] flex items-center justify-center text-xl mb-6">📱</div>
+                    <h3 class="text-xl font-semibold mb-3">Stories & Conteúdo Dinâmico</h3>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed">Interação direta diária, enquetes, rotina espontânea e links estratégicos convertendo cliques.</p>
                 </div>
-                <div class="metric-card glass rounded-3xl p-8 text-center">
-                    <h3 class="counter text-5xl font-bold gold-text" data-target="400">0</h3>
-                    <p class="mt-3 text-gray-500">Mil Alcance</p>
+                <div class="p-8 border border-gray-100 rounded-3xl bg-white shadow-premium transition-all hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-2xl bg-[#fff0f2] flex items-center justify-center text-xl mb-6">🎬</div>
+                    <h3 class="text-xl font-semibold mb-3">Reels Viral & Review</h3>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed">Vídeos em alta definição com edição sofisticada com foco em amplo alcance orgânico.</p>
                 </div>
-                <div class="metric-card glass rounded-3xl p-8 text-center">
-                    <h3 class="counter text-5xl font-bold gold-text" data-target="30">0</h3>
-                    <p class="mt-3 text-gray-500">Mil Views Reels</p>
+                <div class="p-8 border border-gray-100 rounded-3xl bg-white shadow-premium transition-all hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-2xl bg-[#fff0f2] flex items-center justify-center text-xl mb-6">📸</div>
+                    <h3 class="text-xl font-semibold mb-3">Feed & Fotos Editoriais</h3>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed">Estética impecável que funciona como vitrine permanente de autoridade para a marca.</p>
                 </div>
-                <div class="metric-card glass rounded-3xl p-8 text-center">
-                    <h3 class="counter text-5xl font-bold gold-text" data-target="3">0</h3>
-                    <p class="mt-3 text-gray-500">Mil Stories</p>
+                <div class="p-8 border border-gray-100 rounded-3xl bg-white shadow-premium transition-all hover:-translate-y-2">
+                    <div class="w-12 h-12 rounded-2xl bg-[#fff0f2] flex items-center justify-center text-xl mb-6">🎤</div>
+                    <h3 class="text-xl font-semibold mb-3">Eventos & Presença VIP</h3>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed">Cobertura qualificada ao vivo atraindo tráfego para inaugurações e lançamentos de coleções.</p>
                 </div>
             </div>
-            <!-- GRÁFICOS DE PERFORMANCE -->
-            <div class="grid lg:grid-cols-2 gap-10 mt-20">
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <h3 class="text-2xl font-semibold mb-8">Performance Mensal</h3>
-                    <canvas id="metricChart"></canvas>
+            
+            <div class="grid sm:grid-cols-3 gap-6 mt-6 fade-up justify-center">
+                <div class="p-6 border border-gray-100 rounded-3xl bg-white shadow-premium text-center">
+                    <span class="text-xs uppercase font-semibold tracking-wider text-amber-600">Embaixadora de Marca</span>
                 </div>
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <h3 class="text-2xl font-semibold mb-8">Distribuição de Alcance</h3>
-                    <canvas id="reachChart"></canvas>
+                <div class="p-6 border border-gray-100 rounded-3xl bg-white shadow-premium text-center">
+                    <span class="text-xs uppercase font-semibold tracking-wider text-amber-600">Produção de Conteúdo UGC</span>
+                </div>
+                <div class="p-6 border border-gray-100 rounded-3xl bg-white shadow-premium text-center">
+                    <span class="text-xs uppercase font-semibold tracking-wider text-amber-600">Vida Cristã & Lifestyle</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PÚBLICO -->
-    <section id="publico" class="py-32">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center fade-up">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Audiência</span>
-                <h2 class="section-title mt-4">Conheça Meu Público</h2>
-                <p class="max-w-3xl mx-auto mt-6 text-gray-600">Uma audiência altamente engajada, majoritariamente feminina, com forte poder de decisão de compra e interesse em lifestyle, moda, beleza, experiências e marcas premium.</p>
+    <!-- INVESTIMENTOS / TABELA DE VALORES -->
+    <section id="investimentos" class="py-32 bg-[#fffbfc] border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-xl mx-auto mb-20 fade-up">
+                <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Comercial</span>
+                <h2 class="text-4xl font-bold text-gray-900">Ações Avulsas</h2>
             </div>
-            <div class="grid lg:grid-cols-2 gap-12 mt-20">
-                <div class="glass rounded-[35px] p-10 shadow-luxury">
-                    <h3 class="text-2xl font-semibold mb-8">Gênero</h3>
-                    <canvas id="genderChart"></canvas>
-                </div>
-                <div class="glass rounded-[35px] p-10 shadow-luxury">
-                    <h3 class="text-2xl font-semibold mb-8">Faixa Etária</h3>
-                    <canvas id="ageChart"></canvas>
-                </div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 mt-14">
-                <div class="glass rounded-3xl p-8 text-center">
-                    <h3 class="text-5xl font-bold gold-text">78%</h3>
-                    <p class="mt-3 text-gray-500">Mulheres</p>
-                </div>
-                <div class="glass rounded-3xl p-8 text-center">
-                    <h3 class="text-5xl font-bold gold-text">22%</h3>
-                    <p class="mt-3 text-gray-500">Homens</p>
-                </div>
-                <div class="glass rounded-3xl p-8 text-center">
-                    <h3 class="text-5xl font-bold gold-text">25-34</h3>
-                    <p class="mt-3 text-gray-500">Principal Faixa Etária</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INSTAGRAM -->
-    <section id="instagram" class="py-32 bg-[#fcfafb]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center fade-up">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Instagram</span>
-                <h2 class="section-title mt-4">Conteúdo em Tempo Real</h2>
-                <p class="mt-6 text-gray-600 max-w-3xl mx-auto">Acompanhe as publicações mais recentes, parcerias, experiências e conteúdos produzidos por Nicole Meira.</p>
-            </div>
-            <!-- WIDGET INSTAGRAM (ELFSIGHT) -->
-            <div class="mt-20">
-                <div class="elfsight-app-7c80ca69-b9cd-4945-810f-6f94344dd6cf" data-elfsight-app-lazy></div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="https://instagram.com/nicolemeira_oficial" target="_blank" class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-pink-300 to-amber-200 text-white font-semibold shadow-luxury">Ver Perfil Completo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="py-32">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center fade-up">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Serviços</span>
-                <h2 class="section-title mt-4">Soluções Para Sua Marca</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-                <div class="service-card glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-5xl mb-6">📱</div>
-                    <h3 class="text-2xl font-semibold">Stories</h3>
-                    <p class="text-gray-600 mt-4">Divulgação espontânea e estratégica, aproximando sua marca da audiência.</p>
-                </div>
-                <div class="service-card glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-5xl mb-6">🎬</div>
-                    <h3 class="text-2xl font-semibold">Reels</h3>
-                    <p class="text-gray-600 mt-4">Conteúdo dinâmico com alto potencial de alcance e engajamento.</p>
-                </div>
-                <div class="service-card glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-5xl mb-6">✨</div>
-                    <h3 class="text-2xl font-semibold">Feed</h3>
-                    <p class="text-gray-600 mt-4">Fotos editoriais valorizando a identidade visual da marca.</p>
-                </div>
-                <div class="service-card glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-5xl mb-6">🎤</div>
-                    <h3 class="text-2xl font-semibold">Eventos</h3>
-                    <p class="text-gray-600 mt-4">Cobertura profissional e geração de conteúdo em tempo real.</p>
-                </div>
-                <div class="service-card glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-5xl mb-6">📸</div>
-                    <h3 class="text-2xl font-semibold">Conteúdo UGC</h3>
-                    <p class="text-gray-600 mt-4">Produção de conteúdo autêntico para uso nas redes sociais da marca.</p>
-                </div>
-                <div class="service-card glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-5xl mb-6">👑</div>
-                    <h3 class="text-2xl font-semibold">Embaixadora</h3>
-                    <p class="text-gray-600 mt-4">Representação contínua da marca, fortalecendo credibilidade e presença.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INVESTIMENTOS -->
-    <section id="investimentos" class="py-32 bg-[#fcfafb]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Investimentos</span>
-                <h2 class="section-title mt-4">Tabela de Valores</h2>
-            </div>
-            <div class="mt-20 overflow-hidden rounded-[35px] shadow-luxury">
-                <table class="w-full bg-white">
-                    <thead>
-                        <tr class="bg-gradient-to-r from-pink-100 to-amber-100">
-                            <th class="p-6 text-left">Serviço</th>
-                            <th class="p-6 text-right">Valor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="p-6">Stories (3 Stories)</td>
-                            <td class="p-6 text-right font-semibold">R$ 350</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-6">Stories Premium (10 Stories)</td>
-                            <td class="p-6 text-right font-semibold">R$ 600</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-6">Reels</td>
-                            <td class="p-6 text-right font-semibold">R$ 750</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-6">Foto Feed + Stories</td>
-                            <td class="p-6 text-right font-semibold">R$ 900</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-6">Reels + Stories</td>
-                            <td class="p-6 text-right font-semibold">R$ 1.100</td>
-                        </tr>
-                        <tr>
-                            <td class="p-6">Cobertura de Eventos</td>
-                            <td class="p-6 text-right font-semibold">R$ 800 a R$ 1.500</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- PLANOS MENSAIS -->
-    <section id="planos" class="py-32">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Parcerias</span>
-                <h2 class="section-title mt-4">Planos Mensais</h2>
-                <p class="mt-6 text-gray-600">Contratação mínima de 3 meses</p>
-            </div>
-            <div class="grid lg:grid-cols-4 gap-8 mt-20">
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <h3 class="text-2xl font-semibold">Bronze</h3>
-                    <p class="text-5xl font-bold mt-6 gold-text">R$500</p>
-                    <p class="text-gray-500 mt-2">por mês</p>
-                </div>
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <h3 class="text-2xl font-semibold">Prata</h3>
-                    <p class="text-5xl font-bold mt-6 gold-text">R$850</p>
-                    <p class="text-gray-500 mt-2">por mês</p>
-                </div>
-                <div class="glass rounded-[35px] p-8 shadow-luxury plan-highlight">
-                    <div class="mb-4">
-                        <span class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm">Mais Recomendado</span>
+            
+            <div class="grid md:grid-cols-3 gap-8 fade-up">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-premium flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Stories Combo</h3>
+                        <p class="text-xs text-gray-400 mt-1 uppercase tracking-widest">Sequência de 3 Stories</p>
+                        <p class="text-sm text-gray-500 mt-4 font-light">Ideal para chamadas rápidas, promoções pontuais e links de conversão.</p>
                     </div>
-                    <h3 class="text-2xl font-semibold">Ouro</h3>
-                    <p class="text-5xl font-bold mt-6 gold-text">R$1500</p>
-                    <p class="text-gray-500 mt-2">por mês</p>
+                    <div class="mt-8 border-t border-gray-50 pt-6">
+                        <span class="text-3xl font-bold text-gray-900">R$ 300</span>
+                    </div>
                 </div>
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <h3 class="text-2xl font-semibold">Diamante</h3>
-                    <p class="text-5xl font-bold mt-6 gold-text">R$2500</p>
-                    <p class="text-gray-500 mt-2">por mês</p>
+                <!-- Card 2 (Destaque) -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-amber-300 shadow-premium flex flex-col justify-between relative scale-105 z-10">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-luxury-gold text-white text-[10px] uppercase tracking-widest px-4 py-1 rounded-full font-bold">Mais Procurado</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Stories Premium</h3>
+                        <p class="text-xs text-amber-600 mt-1 uppercase tracking-widest">Sequência Completa de 10 Stories</p>
+                        <p class="text-sm text-gray-500 mt-4 font-light">Excelente para reviews detalhados, provadores ou rotina imersiva em clínicas e lojas.</p>
+                    </div>
+                    <div class="mt-8 border-t border-gray-50 pt-6">
+                        <span class="text-3xl font-bold text-gray-900">R$ 600</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-premium flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Reels Oficial</h3>
+                        <p class="text-xs text-gray-400 mt-1 uppercase tracking-widest">1 Vídeo Reels de Alta Performance</p>
+                        <p class="text-sm text-gray-500 mt-4 font-light">Conteúdo estético de alto alcance orgânico que permanece fixo na vitrine.</p>
+                    </div>
+                    <div class="mt-8 border-t border-gray-50 pt-6">
+                        <span class="text-3xl font-bold text-gray-900">R$ 450</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combos de Feed + Stories -->
+            <div class="grid md:grid-cols-3 gap-8 mt-12 fade-up">
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-premium flex justify-between items-center md:col-span-1">
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-lg">Foto Feed + 3 Stories</h4>
+                        <p class="text-xs text-gray-400 mt-1">Presença Dupla</p>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900 ml-4">R$ 600</span>
+                </div>
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-premium flex justify-between items-center md:col-span-1">
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-lg">Reels + 3 Stories</h4>
+                        <p class="text-xs text-gray-400 mt-1">Máxima Entrega</p>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900 ml-4">R$ 650</span>
+                </div>
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-premium flex justify-between items-center md:col-span-1">
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-lg">Cobertura de Eventos</h4>
+                        <p class="text-xs text-gray-400 mt-1">Presença VIP Local</p>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900 ml-4">R$ 800 - R$ 1.500</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SIMULADOR DE CAMPANHAS -->
-    <section id="simulador" class="py-32 bg-[#fcfafb]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Simulador</span>
-                <h2 class="section-title mt-4">Monte Sua Campanha</h2>
-                <p class="mt-6 text-gray-600">Selecione os serviços desejados e receba um orçamento instantâneo.</p>
+    <!-- PLANOS MENSAIS E SIMULADOR INTEGRADO -->
+    <section id="planos" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-xl mx-auto mb-12 fade-up">
+                <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Parceria Estendida</span>
+                <h2 class="text-4xl font-bold text-gray-900">Planos Mensais Retainers</h2>
+                <p class="text-sm text-gray-400 mt-2">Contratação mínima de 3 meses para consolidação de branding.</p>
             </div>
-            <div class="glass rounded-[40px] p-10 mt-16 shadow-luxury">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <label class="flex items-center gap-4">
-                        <input type="checkbox" class="serviceCheck" value="350">
-                        <span>Stories (3 Stories) — R$350</span>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
+                <!-- Bronze -->
+                <div class="border border-gray-100 rounded-3xl p-6 bg-white shadow-premium flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-800">Plano Bronze</h4>
+                        <ul class="text-xs text-gray-500 mt-4 space-y-3 font-light">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> 4 Stories por Semana</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> Presença Mensal Constante</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 border-t border-gray-50 pt-4">
+                        <span class="text-2xl font-bold text-gray-900">R$ 500</span><span class="text-xs text-gray-400">/mês</span>
+                    </div>
+                </div>
+                <!-- Prata -->
+                <div class="border border-gray-100 rounded-3xl p-6 bg-white shadow-premium flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-800">Plano Prata</h4>
+                        <ul class="text-xs text-gray-500 mt-4 space-y-3 font-light">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> 4 Stories por Semana</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> + 1 Reels Estratégico</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 border-t border-gray-50 pt-4">
+                        <span class="text-2xl font-bold text-gray-900">R$ 850</span><span class="text-xs text-gray-400">/mês</span>
+                    </div>
+                </div>
+                <!-- Ouro (Destaque) -->
+                <div class="border-2 border-amber-300 rounded-3xl p-6 bg-white shadow-premium flex flex-col justify-between relative scale-105 bg-gradient-to-b from-white to-[#fffbf7]">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-800">Plano Ouro</h4>
+                        <ul class="text-xs text-gray-500 mt-4 space-y-3 font-light">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> 4 Stories por Semana</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> + 2 Reels de Alto Impacto</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> + 1 Publicação no Feed</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 border-t border-gray-50 pt-4">
+                        <span class="text-2xl font-bold text-gray-900">R$ 1.500</span><span class="text-xs text-gray-400">/mês</span>
+                    </div>
+                </div>
+                <!-- Diamante -->
+                <div class="border border-gray-100 rounded-3xl p-6 bg-white shadow-premium flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-800">Plano Diamante</h4>
+                        <ul class="text-xs text-gray-500 mt-4 space-y-3 font-light">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> 4 Stories por Semana</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> + 4 Reels Narrativos</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400"></span> + 2 Publicações no Feed</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 border-t border-gray-50 pt-4">
+                        <span class="text-2xl font-bold text-gray-900">R$ 2.500</span><span class="text-xs text-gray-400">/mês</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIMULADOR DE PROPOSTA RÁPIDA -->
+            <div class="glass rounded-[35px] p-8 md:p-12 mt-20 shadow-premium max-w-4xl mx-auto border border-white">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800">Simulador de Proposta Rápida</h3>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Monte sua campanha customizada selecionando os formatos desejados</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <label class="flex items-center gap-4 p-4 border border-gray-50 rounded-2xl bg-white hover:bg-gray-50 cursor-pointer transition-colors">
+                        <input type="checkbox" class="serviceCheck accent-amber-500 w-4 h-4" value="300">
+                        <span class="text-sm text-gray-600">3 Stories — R$ 300</span>
                     </label>
-                    <label class="flex items-center gap-4">
-                        <input type="checkbox" class="serviceCheck" value="600">
-                        <span>Stories Premium — R$600</span>
+                    <label class="flex items-center gap-4 p-4 border border-gray-50 rounded-2xl bg-white hover:bg-gray-50 cursor-pointer transition-colors">
+                        <input type="checkbox" class="serviceCheck accent-amber-500 w-4 h-4" value="600">
+                        <span class="text-sm text-gray-600">Stories Premium (10 st) — R$ 600</span>
                     </label>
-                    <label class="flex items-center gap-4">
-                        <input type="checkbox" class="serviceCheck" value="750">
-                        <span>Reels — R$750</span>
+                    <label class="flex items-center gap-4 p-4 border border-gray-50 rounded-2xl bg-white hover:bg-gray-50 cursor-pointer transition-colors">
+                        <input type="checkbox" class="serviceCheck accent-amber-500 w-4 h-4" value="450">
+                        <span class="text-sm text-gray-600">1 Reels Oficial — R$ 450</span>
                     </label>
-                    <label class="flex items-center gap-4">
-                        <input type="checkbox" class="serviceCheck" value="900">
-                        <span>Foto Feed + Stories — R$900</span>
+                    <label class="flex items-center gap-4 p-4 border border-gray-50 rounded-2xl bg-white hover:bg-gray-50 cursor-pointer transition-colors">
+                        <input type="checkbox" class="serviceCheck accent-amber-500 w-4 h-4" value="600">
+                        <span class="text-sm text-gray-600">Foto Feed + 3 Stories — R$ 600</span>
                     </label>
-                    <label class="flex items-center gap-4">
-                        <input type="checkbox" class="serviceCheck" value="1100">
-                        <span>Reels + Stories — R$1.100</span>
-                    </label>
-                    <label class="flex items-center gap-4">
-                        <input type="checkbox" class="serviceCheck" value="1500">
-                        <span>Evento Premium — R$1.500</span>
+                    <label class="flex items-center gap-4 p-4 border border-gray-50 rounded-2xl bg-white hover:bg-gray-50 cursor-pointer transition-colors">
+                        <input type="checkbox" class="serviceCheck accent-amber-500 w-4 h-4" value="650">
+                        <span class="text-sm text-gray-600">Reels + 3 Stories — R$ 650</span>
                     </label>
                 </div>
-                <div class="mt-12 text-center">
-                    <h3 class="text-2xl font-semibold">Investimento Total</h3>
-                    <p id="totalValue" class="text-6xl font-bold gold-text mt-4">R$0</p>
-                    <button onclick="enviarWhats()" class="mt-8 px-8 py-4 rounded-full bg-gradient-to-r from-pink-300 to-amber-200 text-white font-semibold shadow-luxury">Solicitar Proposta</button>
+                <div class="mt-10 pt-8 border-t border-gray-100 text-center">
+                    <h4 class="text-sm uppercase tracking-widest text-gray-400 font-medium">Orçamento Estimado</h4>
+                    <p id="totalValue" class="text-5xl font-bold text-gray-900 mt-2">R$ 0</p>
+                    <button onclick="enviarPropostaWhats()" class="mt-6 px-10 py-4 rounded-full bg-luxury-gold text-white text-xs uppercase tracking-widest font-semibold shadow-premium hover:opacity-90 transition-opacity">Mandar Proposta via WhatsApp</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
-    <section id="depoimentos" class="py-32">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Feedbacks</span>
-                <h2 class="section-title mt-4">O Que Dizem As Marcas</h2>
+    <!-- PÁGINA ESPECIAL: MARCAS QUE CONFIAM NO MEU TRABALHO -->
+    <section id="marcas" class="py-32 bg-[#fffbfc] border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-xl mx-auto mb-16 fade-up">
+                <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Portfólio & Parcerias</span>
+                <h2 class="text-4xl font-bold text-gray-900">Marcas que confiam no meu trabalho</h2>
+                <div class="w-12 h-[2px] bg-amber-300 mx-auto mt-6"></div>
             </div>
-            <div class="grid lg:grid-cols-3 gap-8 mt-20">
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-yellow-400 text-2xl">★★★★★</div>
-                    <p class="mt-6 text-gray-600">"A parceria trouxe excelente retorno e uma conexão genuína com nosso público."</p>
-                    <h4 class="font-semibold mt-6">Marca de Moda</h4>
-                </div>
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-yellow-400 text-2xl">★★★★★</div>
-                    <p class="mt-6 text-gray-600">"Nicole entrega profissionalismo, qualidade visual e muita credibilidade."</p>
-                    <h4 class="font-semibold mt-6">Empresa de Beleza</h4>
-                </div>
-                <div class="glass rounded-[35px] p-8 shadow-luxury">
-                    <div class="text-yellow-400 text-2xl">★★★★★</div>
-                    <p class="mt-6 text-gray-600">"Excelente cobertura de evento e grande alcance regional."</p>
-                    <h4 class="font-semibold mt-6">Organização de Eventos</h4>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70 fade-up">
+                <div class="h-20 w-40 flex items-center justify-center border border-gray-100 bg-white rounded-2xl shadow-sm text-xs font-medium tracking-widest text-gray-300 uppercase italic">Clínica & Estética</div>
+                <div class="h-20 w-40 flex items-center justify-center border border-gray-100 bg-white rounded-2xl shadow-sm text-xs font-medium tracking-widest text-gray-300 uppercase italic">Moda Premium</div>
+                <div class="h-20 w-40 flex items-center justify-center border border-gray-100 bg-white rounded-2xl shadow-sm text-xs font-medium tracking-widest text-gray-300 uppercase italic">Gastronomia</div>
+                <div class="h-20 w-40 flex items-center justify-center border border-gray-100 bg-white rounded-2xl shadow-sm text-xs font-medium tracking-widest text-gray-300 uppercase italic">Hotelaria Luxury</div>
+                <div class="h-20 w-40 flex items-center justify-center border border-gray-100 bg-white rounded-2xl shadow-sm text-xs font-medium tracking-widest text-gray-300 uppercase italic">Beauty Salon</div>
+            </div>
+
+            <!-- Imagem 3 Decorativa Inferior -->
+            <div class="mt-24 max-w-2xl mx-auto fade-up">
+                <div class="bg-white p-3 rounded-[35px] shadow-premium border border-gray-100">
+                    <img src="https://i.ibb.co/v4pvWrkM/image.png" alt="Nicole Meira Lifestyle" class="rounded-[24px] w-full object-cover aspect-[16/9] img-premium" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="py-32 bg-[#fcfafb]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center">
-                <span class="uppercase tracking-[5px] text-pink-400 text-sm">Contato</span>
-                <h2 class="section-title mt-4">Vamos Trabalhar Juntos?</h2>
-                <p class="mt-6 text-gray-600">Entre em contato para campanhas, eventos e parcerias.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 mt-20">
-                <div class="glass rounded-[35px] p-8 text-center">
-                    <div class="text-5xl">📱</div>
-                    <h3 class="mt-6 text-xl font-semibold">WhatsApp</h3>
-                    <p class="mt-3 text-gray-500">+55 21 98289-8660</p>
+    <!-- PÁGINA FINAL / CONTATO -->
+    <section id="contato" class="py-32 bg-white relative">
+        <div class="max-w-4xl mx-auto px-8 text-center relative z-10 fade-up">
+            <span class="text-xs uppercase tracking-[6px] text-amber-600 font-semibold block mb-2">Conexão Direct</span>
+            <h2 class="text-5xl font-bold text-gray-900 leading-tight">Vamos construir <br>o próximo case de sucesso?</h2>
+            <p class="text-gray-500 font-light mt-4 max-w-md mx-auto">Solicite dates de agenda, análise de briefing e reservas de contratos mensais.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mt-16 text-left">
+                <div class="border border-gray-100 rounded-2xl p-6 shadow-sm bg-[#fffdfd]">
+                    <span class="text-xs uppercase tracking-wider text-gray-400 block mb-2">WhatsApp</span>
+                    <a href="https://wa.me/5521982898660" target="_blank" class="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors">(21) 98289-8660</a>
                 </div>
-                <div class="glass rounded-[35px] p-8 text-center">
-                    <div class="text-5xl">📸</div>
-                    <h3 class="mt-6 text-xl font-semibold">Instagram</h3>
-                    <p class="mt-3 text-gray-500">@nicolemeira_oficial</p>
+                <div class="border border-gray-100 rounded-2xl p-6 shadow-sm bg-[#fffdfd]">
+                    <span class="text-xs uppercase tracking-wider text-gray-400 block mb-2">Instagram</span>
+                    <a href="https://instagram.com/nicolemeira_oficial" target="_blank" class="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors">@nicolemeira_oficial</a>
                 </div>
-                <div class="glass rounded-[35px] p-8 text-center">
-                    <div class="text-5xl">✉️</div>
-                    <h3 class="mt-6 text-xl font-semibold">E-mail</h3>
-                    <p class="mt-3 text-gray-500">contato@nicolemeira.com.br</p>
+                <div class="border border-gray-100 rounded-2xl p-6 shadow-sm bg-[#fffdfd]">
+                    <span class="text-xs uppercase tracking-wider text-gray-400 block mb-2">E-mail Corporativo</span>
+                    <a href="mailto:godoi.nini@gmail.com" class="text-sm font-semibold text-gray-700 hover:text-amber-600 transition-colors break-all">godoi.nini@gmail.com</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RODAPÉ -->
-    <footer class="bg-white py-12 border-t">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold gold-text">Nicole Meira</h3>
-            <p class="mt-4 text-gray-500">Guarapuava • Paraná</p>
-            <p class="mt-2 text-gray-500">Instagram: @nicolemeira_oficial</p>
-            <p class="mt-6 text-gray-400 text-sm">© 2026 Nicole Meira. Todos os direitos reservados.</p>
-            <p class="mt-2 text-gray-400 text-sm">www.nicolemeira.com.br</p>
+    <!-- FOOTER LUXURY -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-8 text-center text-xs text-gray-400 tracking-widest uppercase font-medium">
+            <p class="font-semibold text-gray-700 text-sm tracking-normal mb-1">Nicole Meira</p>
+            <p class="mb-4 font-light text-[10px]">Guarapuava • Paraná • 18 Anos</p>
+            <p class="text-[10px] lowercase text-gray-300">© 2026 Nicole Meira. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- SCRIPT ELFSIGHT INSTAGRAM -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
 
-    <!-- JAVASCRIPT GERAL -->
+    <!-- LOGICA E GRÁFICOS JAVASCRIPT -->
     <script>
-        /* ANIMAÇÃO DE ENTRADA */
+        /* INTERSECTION OBSERVER ANIMATION */
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if(entry.isIntersecting){
                     entry.target.classList.add("show");
                 }
             });
-        });
-        document.querySelectorAll(".fade-up").forEach(el=>{
-            observer.observe(el);
-        });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
 
-        /* CONTADORES */
-        const counters = document.querySelectorAll(".counter");
-        counters.forEach(counter=>{
-            const updateCount = ()=>{
-                const target = +counter.getAttribute("data-target");
-                const count = +counter.innerText.replace('+', '');
-                const increment = target / 80;
-                if(count < target){
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCount, 25);
-                }else{
-                    counter.innerText = target + "+";
-                }
-            }
-            updateCount();
-        });
-
-        /* SIMULADOR */
-        const checks = document.querySelectorAll(".serviceCheck");
-        const totalValue = document.getElementById("totalValue");
-        checks.forEach(check=>{
-            check.addEventListener("change",()=>{
-                let total = 0;
-                checks.forEach(item=>{
-                    if(item.checked){
-                        total += Number(item.value);
-                    }
-                });
-                totalValue.innerText = `R$ ${total.toLocaleString('pt-BR')}`;
-            });
-        });
-
-        function enviarWhats(){
-            let total = 0;
-            let servicos = [];
-            checks.forEach(item=>{
-                if(item.checked){
-                    total += Number(item.value);
-                    servicos.push(item.parentElement.innerText.trim());
-                }
-            });
-            const mensagem = `Olá Nicole! Gostaria de solicitar uma proposta.%0A%0AServiços:%0A${servicos.join('%0A')}%0A%0ATotal estimado: R$ ${total}`;
-            window.open(`https://wa.me/5521982898660?text=${mensagem}`, '_blank');
-        }
-
-        /* CHART PERFORMANCE */
-        new Chart(
-            document.getElementById('metricChart'),
-            {
-                type: 'line',
-                data: {
-                    labels: ['Jan','Fev','Mar','Abr','Mai','Jun'],
-                    datasets: [{
-                        label: 'Alcance',
-                        data: [180,220,260,310,370,400],
-                        borderColor: '#C49A6C',
-                        backgroundColor: 'rgba(196, 154, 108, 0.1)',
-                        tension: .4,
-                        fill: true
-                    }]
-                }
-            }
-        );
-
-        /* CHART DISTRIBUIÇÃO */
-        new Chart(
-            document.getElementById('reachChart'),
-            {
-                type: 'doughnut',
-                data: {
-                    labels: ['Reels', 'Stories', 'Feed'],
-                    datasets: [{
-                        data: [55, 25, 20],
-                        backgroundColor: ['#C49A6C', '#FBCFE8', '#F3F4F6']
-                    }]
-                }
-            }
-        );
-
-        /* CHART GÊNERO */
-        new Chart(
-            document.getElementById('genderChart'),
-            {
-                type: 'pie',
-                data: {
-                    labels: ['Mulheres', 'Homens'],
-                    datasets: [{
-                        data: [78, 22],
-                        backgroundColor: ['#FBCFE8', '#C49A6C']
-                    }]
-                }
-            }
-        );
-
-        /* CHART IDADE */
+        /* CHART FAIXA ETÁRIA */
         new Chart(
             document.getElementById('ageChart'),
             {
                 type: 'bar',
                 data: {
-                    labels: ['18-24', '25-34', '35-44'],
+                    labels: ['25-34 anos', '18-24 anos', '35-44 anos'],
                     datasets: [{
-                        label: '%',
-                        data: [35, 45, 20],
-                        backgroundColor: '#C49A6C'
+                        label: 'Porcentagem de Audiência (%)',
+                        data: [40.7, 22.7, 21.1],
+                        backgroundColor: ['#dfba91', '#fbcfe8', '#e5e7eb'],
+                        borderWidth: 0,
+                        borderRadius: 12,
+                        barThickness: 32
                     }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#f3f4f6' }, border: { dash: [5, 5] } },
+                        x: { grid: { display: false } }
+                    }
                 }
             }
         );
+
+        /* SIMULADOR DE ORÇAMENTO */
+        const checkboxes = document.querySelectorAll(".serviceCheck");
+        const totalDisplay = document.getElementById("totalValue");
+        
+        checkboxes.forEach(box => {
+            box.addEventListener("change", () => {
+                let currentTotal = 0;
+                checkboxes.forEach(item => {
+                    if(item.checked) currentTotal += Number(item.value);
+                });
+                totalDisplay.innerText = `R$ ${currentTotal.toLocaleString('pt-BR')}`;
+            });
+        });
+
+        function enviarPropostaWhats() {
+            let total = 0;
+            let listados = [];
+            checkboxes.forEach(item => {
+                if(item.checked){
+                    total += Number(item.value);
+                    listados.push("• " + item.parentElement.innerText.trim());
+                }
+            });
+            
+            if(total === 0) {
+                alert("Por favor, selecione pelo menos um serviço para simular.");
+                return;
+            }
+
+            const textoMsg = `Olá Nicole, visitando o seu Mídia Kit Premium montei uma proposta customizada:%0A%0A${listados.join('%0A')}%0A%0A*Investimento total simulado: R$ ${total.toLocaleString('pt-BR')}*%0A%0AGostaria de verificar disponibilidade de agenda da sua parte!`;
+            window.open(`https://wa.me/5521982898660?text=${textoMsg}`, '_blank');
+        }
     </script>
 </body>
 </html>
