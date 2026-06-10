@@ -1,253 +1,63 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+import React, { useState, useEffect } from 'react';
+import { 
+  Instagram, 
+  MapPin, 
+  User, 
+  Calendar, 
+  Users, 
+  TrendingUp, 
+  Eye, 
+  Award, 
+  Mail, 
+  Phone, 
+  CheckCircle2, 
+  Sparkles, 
+  ChevronRight, 
+  Menu, 
+  X,
+  FileText,
+  DollarSign,
+  Heart
+} from 'lucide-react';
 
-<title>Nicole Meira | Mídia Kit</title>
+export default function App() {
+  const [activeTab, setActiveTab] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [campaignType, setCampaignType] = useState('single'); 
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  // Injeção de fontes premium e estilizações globais de fundo enriquecido
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
 
-<style>
-body{
-  font-family:Inter,sans-serif;
-  background:#fff;
-  color:#2b2b2b;
-  overflow-x:hidden;
-  scroll-behavior:smooth;
-}
-
-/* tipografia luxo */
-h1,h2,h3{
-  font-family:'Playfair Display',serif;
-  letter-spacing:-0.02em;
-}
-
-/* fundo editorial */
-.bg-hero{
-  background:radial-gradient(circle at top,#fff5f7,transparent 60%),
-             radial-gradient(circle at bottom,#f7f2ee,transparent 60%);
-}
-
-/* cards luxo */
-.card{
-  background:#fff;
-  border:1px solid rgba(0,0,0,0.06);
-  border-radius:28px;
-  transition:all .6s cubic-bezier(0.16,1,0.3,1);
-}
-
-/* hover premium */
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 35px 80px rgba(0,0,0,0.08);
-}
-
-/* botão luxo */
-.btn{
-  transition:.5s ease;
-}
-
-.btn:hover{
-  transform:scale(1.03);
-  opacity:.9;
-}
-
-/* animação de entrada */
-.reveal{
-  opacity:0;
-  transform:translateY(35px);
-  transition:all 1.1s cubic-bezier(0.16,1,0.3,1);
-}
-
-.reveal.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* floating WhatsApp */
-.fab{
-  position:fixed;
-  bottom:22px;
-  right:22px;
-  background:#25D366;
-  color:#fff;
-  padding:14px;
-  border-radius:999px;
-  font-size:20px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-  z-index:999;
-}
-</style>
-</head>
-
-<body>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/5521982898660" class="fab btn">💬</a>
-
-<!-- HERO -->
-<section class="bg-hero min-h-screen flex items-center text-center px-6 reveal">
-
-<div class="max-w-3xl mx-auto">
-
-<h1 class="text-6xl md:text-7xl font-bold">
-Nicole <span class="text-[#c49a6c]">Meira</span>
-</h1>
-
-<p class="mt-6 text-gray-500 tracking-widest uppercase text-xs">
-Lifestyle • Moda • Beleza • Viagens • Conteúdo Digital
-</p>
-
-<p class="mt-8 text-gray-600 leading-relaxed">
-Criadora de conteúdo com estética editorial, narrativa autêntica e posicionamento premium para marcas que querem presença e desejo.
-</p>
-
-<div class="mt-10 flex justify-center gap-4 flex-wrap">
-<a class="px-10 py-4 rounded-full bg-gradient-to-r from-[#d8b08c] to-[#f0d6b8] text-white btn"
-href="https://wa.me/5521982898660">
-Iniciar parceria
-</a>
-
-<a class="px-10 py-4 rounded-full border btn"
-href="#invest">
-Ver mídia kit
-</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- SOBRE -->
-<section class="py-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center reveal">
-
-<div>
-<h2 class="text-4xl font-bold">Posicionamento estratégico</h2>
-
-<p class="mt-6 text-gray-600 leading-relaxed">
-Conteúdo focado em lifestyle real, estética sofisticada e conexão direta com público altamente engajado e qualificado.
-</p>
-
-<!-- MÉTRICAS LIMPAS -->
-<div class="grid grid-cols-3 mt-10 text-center">
-<div>
-<h3 class="text-2xl font-bold">93K</h3>
-<p class="text-xs text-gray-400">Seguidores</p>
-</div>
-<div>
-<h3 class="text-2xl font-bold">400K</h3>
-<p class="text-xs text-gray-400">Alcance</p>
-</div>
-<div>
-<h3 class="text-2xl font-bold">30K</h3>
-<p class="text-xs text-gray-400">Reels</p>
-</div>
-</div>
-
-</div>
-
-<div class="card p-6">
-<img src="https://res.cloudinary.com/dpfjiwvcp/image/upload/f_auto,q_auto/IMG_1789_grdybq"
-class="rounded-2xl w-full object-cover">
-</div>
-
-</section>
-
-<!-- SERVIÇOS -->
-<section class="py-28 px-6 bg-[#fafafa]">
-
-<div class="text-center max-w-xl mx-auto reveal">
-<h2 class="text-4xl font-bold">Formatos de entrega</h2>
-</div>
-
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-14">
-
-<div class="card p-8 reveal">
-<h3 class="text-xl font-bold">Stories</h3>
-<p class="text-gray-500 mt-3">Narrativa diária com alto impacto de conversão.</p>
-</div>
-
-<div class="card p-8 reveal">
-<h3 class="text-xl font-bold">Reels</h3>
-<p class="text-gray-500 mt-3">Conteúdo cinematográfico para alcance orgânico.</p>
-</div>
-
-<div class="card p-8 reveal">
-<h3 class="text-xl font-bold">Feed</h3>
-<p class="text-gray-500 mt-3">Posicionamento visual permanente de marca.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- INVESTIMENTOS -->
-<section id="invest" class="py-28 px-6 max-w-6xl mx-auto reveal">
-
-<div class="text-center">
-<h2 class="text-4xl font-bold">Investimentos</h2>
-</div>
-
-<div class="grid md:grid-cols-3 gap-8 mt-14">
-
-<div class="card p-8">
-<h3 class="font-bold">Stories</h3>
-<p class="text-3xl mt-4">R$ 300</p>
-</div>
-
-<div class="card p-8 border-2 border-[#d8b08c]">
-<h3 class="font-bold">Reels</h3>
-<p class="text-3xl mt-4">R$ 450</p>
-</div>
-
-<div class="card p-8">
-<h3 class="font-bold">Combo</h3>
-<p class="text-3xl mt-4">R$ 650</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTATO -->
-<section class="py-32 px-6 text-center bg-hero reveal">
-
-<h2 class="text-5xl font-bold">Vamos criar algo memorável?</h2>
-
-<p class="mt-6 text-gray-500">
-Agenda aberta para campanhas e parcerias estratégicas.
-</p>
-
-<div class="mt-10 flex justify-center gap-4 flex-wrap">
-<a class="px-12 py-4 rounded-full bg-gradient-to-r from-[#d8b08c] to-[#f0d6b8] text-white btn"
-href="https://wa.me/5521982898660">
-Falar no WhatsApp
-</a>
-
-<a class="px-12 py-4 border rounded-full btn"
-href="https://instagram.com/nicolemeira_oficial"
-target="_blank">
-Ver Instagram
-</a>
-</div>
-
-</section>
-
-<script>
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show")
-    }
-  })
-},{threshold:0.12})
-
-document.querySelectorAll(".reveal").forEach(el=>{
-  observer.observe(el)
-})
-</script>
-
-</body>
-</html>
+  const profileData = {
+    name: "Nicole Meira",
+    instagram: "@nicolemeira_oficial",
+    location: "Guarapuava - Paraná",
+    age: "18 anos",
+    about: "Sou Nicole Meira, criadora de conteúdo digital com mais de 93 mil seguidores. Produzo conteúdos autênticos sobre lifestyle, moda, viagens, eventos e vida cristã, conectando marcas ao meu público de forma natural, estratégica e humanizada. Ao longo da minha trajetória já realizei campanhas para dezenas de empresas locais e nacionais.",
+    niches: [
+      { name: "Lifestyle", color: "from-rose-200 via-rose-100 to-amber-100" },
+      { name: "Moda", color: "from-amber-100 via-orange-50 to-rose-200" },
+      { name: "Viagens", color: "from-rose-100 via-rose-50 to-rose-300" },
+      { name: "Vida Cristã", color: "from-amber-100 via-amber-50 to-rose-200" },
+      { name: "Eventos", color: "from-rose-200 via-amber-50 to-amber-100" },
+      { name: "Beleza", color: "from-rose-100 via-orange-50 to-amber-100" }
+    ],
+    stats: [
+      { label: "Seguidores", value: "93,4 mil", desc: "Audiência fiel e ativa", icon: Users },
+      { label: "Alcance Mensal", value: "+400 mil", desc: "Contas alcançadas", icon: TrendingUp },
+      { label: "Visualizações Stories", value: "3 mil+", desc: "Média por publicação", icon: Eye },
+      { label: "Visualizações Reels", value: "30 mil+", desc: "Média de engajamento", icon: Sparkles }
+    ],
+    audience: {
+      gender: { women: 78.3, men: 21.7 },
+      age:
