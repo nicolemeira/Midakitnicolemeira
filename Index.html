@@ -1,1293 +1,1109 @@
-```html
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicole Meira | Influenciadora Digital & Mídia Kit Premium</title>
-    
-    <!-- Meta Tags para SEO e Compartilhamento -->
-    <meta name="description" content="Conectando marcas ao público de forma autêntica, estratégica e humanizada. Conheça o Mídia Kit de Nicole Meira.">
-    <meta name="keywords" content="Nicole Meira, Influenciadora Digital, Moda, Beleza, Lifestyle, Guarapuava, Paraná, Criadora de Conteúdo, Mídia Kit">
-    <meta name="author" content="Nicole Meira">
-    
-    <!-- Google Fonts - Cormorant Garamond (Editorial/Luxo) e Inter (Moderna/Leitura) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons para Ícones Minimalistas -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicole Meira — Mídia Kit 2025</title>
+  <meta name="description" content="Mídia Kit oficial de Nicole Meira — influenciadora digital de lifestyle, moda, vida cristã e estética. Guarapuava, PR." />
+  <meta name="keywords" content="Nicole Meira, influenciadora digital, mídia kit, moda, lifestyle, Guarapuava" />
+  <meta property="og:title" content="Nicole Meira — Mídia Kit 2025" />
+  <meta property="og:description" content="Conecte sua marca ao público certo com autenticidade e sofisticação." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <!-- Tailwind Custom Configuration para a Paleta Premium -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            white: '#FFFFFF',
-                            lightPink: '#FFF0F2',
-                            roseGold: '#B76E79',
-                            roseGoldLight: '#E8C5C8',
-                            nude: '#F7EBE8',
-                            nudeDark: '#E3D2CE',
-                            goldSoft: '#C5A059',
-                            goldSoftLight: '#F3ECE0',
-                            charcoal: '#1A1515'
-                        }
-                    },
-                    fontFamily: {
-                        editorial: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Inter"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    :root {
+      --rose:       #C8849A;
+      --rose-light: #E8C4C4;
+      --rose-pale:  #F7EEF0;
+      --gold:       #C9A96E;
+      --gold-light: #E8D5B0;
+      --cream:      #FAFAF8;
+      --nude:       #1C1410;
+      --nude-mid:   #4A3728;
+      --nude-soft:  #7A6255;
+      --white:      #FFFFFF;
+      --font-display: 'Playfair Display', serif;
+      --font-body:    'Inter', sans-serif;
+      --font-accent:  'Cormorant Garamond', serif;
+    }
 
-    <style>
-        /* Efeito de Gradiente de Borda Rose Gold */
-        .rose-gold-border {
-            position: relative;
-            background: linear-gradient(to right, #B76E79, #C5A059, #E8C5C8);
-            padding: 1px;
-        }
-        
-        .rose-gold-border-content {
-            background: white;
-            height: 100%;
-            width: 100%;
-        }
+    html { scroll-behavior: smooth; }
 
-        /* Glassmorphism customizado */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--nude);
+      overflow-x: hidden;
+    }
 
-        .glass-panel-dark {
-            background: rgba(26, 21, 21, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rose-light);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--nude);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--rose); }
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--nude-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-cta {
+      background: var(--rose);
+      color: var(--white) !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 2rem;
+      font-size: 0.72rem !important;
+      letter-spacing: 0.1em;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--nude-mid) !important; color: var(--white) !important; }
 
-        /* Animações suaves */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px; background: var(--nude);
+      transition: all 0.3s;
+    }
 
-        .fade-in-up.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    /* ─── SECTIONS BASE ───────────────────────────────── */
+    section {
+      min-height: 100vh;
+      padding: 100px 2rem 80px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--nude);
+    }
+    .section-title em { font-style: italic; color: var(--rose); }
+    .divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, var(--rose), var(--gold));
+      margin: 1.5rem auto;
+    }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #FAF5F0;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #B76E79;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #96545F;
-        }
-    </style>
+    /* ─── PAGE 1: SOBRE MIM ───────────────────────────── */
+    #sobre {
+      background: var(--cream);
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #sobre::before {
+      content: '';
+      position: absolute; top: 0; right: 0;
+      width: 50%; height: 100%;
+      background: linear-gradient(135deg, var(--rose-pale) 0%, var(--rose-light) 100%);
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 0;
+    }
+    .sobre-inner {
+      max-width: 1100px; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .sobre-text { }
+    .sobre-text .section-label { text-align: left; }
+    .sobre-text .section-title { text-align: left; margin-bottom: 0.5rem; }
+    .sobre-meta {
+      display: flex; gap: 1.5rem; margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .sobre-meta-item {
+      display: flex; flex-direction: column;
+    }
+    .sobre-meta-item span:first-child {
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--nude-soft); margin-bottom: 0.2rem;
+    }
+    .sobre-meta-item span:last-child {
+      font-family: var(--font-display); font-size: 1rem; color: var(--nude);
+    }
+    .content-tags {
+      display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.5rem 0;
+    }
+    .tag {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--rose);
+      border-radius: 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 500;
+    }
+    .sobre-p {
+      font-size: 0.9rem; line-height: 1.75; color: var(--nude-soft);
+      margin-bottom: 2rem;
+    }
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      padding: 0.85rem 2rem;
+      background: var(--rose);
+      color: var(--white);
+      border: none; border-radius: 3rem;
+      font-family: var(--font-body);
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.25s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--nude-mid); transform: translateY(-2px); }
+    .btn-secondary {
+      padding: 0.85rem 2rem;
+      background: transparent;
+      color: var(--nude);
+      border: 1px solid var(--gold);
+      border-radius: 3rem;
+      font-family: var(--font-body);
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; text-decoration: none;
+      transition: all 0.25s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { background: var(--gold); color: var(--white); transform: translateY(-2px); }
+
+    .sobre-photo {
+      position: relative;
+    }
+    .photo-frame {
+      position: relative; border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(200, 132, 154, 0.25);
+    }
+    .photo-frame img {
+      width: 100%; height: 580px; object-fit: cover; display: block;
+      filter: brightness(1.02) contrast(1.02);
+    }
+    .photo-accent {
+      position: absolute; bottom: -20px; left: -20px;
+      width: 80px; height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 2px;
+      z-index: -1;
+    }
+    .photo-accent2 {
+      position: absolute; top: -20px; right: -20px;
+      width: 60px; height: 60px;
+      border: 1px solid var(--rose);
+      border-radius: 2px;
+      z-index: -1;
+    }
+
+    /* ─── PAGE 2: ESSÊNCIA ────────────────────────────── */
+    #essencia {
+      background: var(--nude);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    #essencia::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,132,154,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .essencia-inner {
+      max-width: 800px; text-align: center; position: relative; z-index: 1;
+    }
+    .essencia-quote {
+      font-family: var(--font-accent);
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--rose-light);
+      line-height: 1.5;
+      margin-bottom: 3rem;
+    }
+    .essencia-quote::before,
+    .essencia-quote::after {
+      content: '"';
+      color: var(--gold);
+      font-size: 1.5em;
+      line-height: 0;
+      vertical-align: -0.4em;
+    }
+    #essencia .section-label { color: var(--gold); }
+    #essencia .section-title { color: var(--cream); }
+    #essencia .divider { background: linear-gradient(90deg, var(--rose), var(--gold)); }
+    .essencia-body {
+      font-size: 0.95rem; line-height: 1.9; color: rgba(250,250,248,0.75);
+      margin-bottom: 1.5rem;
+    }
+    .essencia-highlight {
+      display: inline-block;
+      color: var(--rose-light); font-weight: 500;
+    }
+
+    /* ─── PAGE 3: MÉTRICAS ────────────────────────────── */
+    #metricas {
+      background: var(--cream);
+    }
+    .metricas-inner {
+      max-width: 1100px; width: 100%;
+    }
+    .metricas-inner .section-label,
+    .metricas-inner .section-title,
+    .metricas-inner .divider { text-align: center; margin-left: auto; margin-right: auto; }
+    .metricas-inner .section-title { text-align: center; }
+
+    .counters-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .counter-card {
+      background: var(--white);
+      border: 1px solid var(--rose-light);
+      border-radius: 4px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .counter-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(200,132,154,0.15); }
+    .counter-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--gold));
+    }
+    .counter-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .counter-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem; font-weight: 600;
+      color: var(--nude);
+      line-height: 1;
+    }
+    .counter-number .suffix { font-size: 1.4rem; color: var(--rose); }
+    .counter-label {
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--nude-soft); margin-top: 0.5rem;
+    }
+
+    .partners-section { margin-top: 3rem; text-align: center; }
+    .partners-title {
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--nude-soft); margin-bottom: 1.5rem;
+    }
+    .partners-grid {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+    }
+    .partner-pill {
+      padding: 0.5rem 1.2rem;
+      border: 1px solid var(--gold-light);
+      border-radius: 2rem;
+      font-size: 0.75rem; font-weight: 500;
+      color: var(--nude-mid);
+      background: var(--white);
+      transition: all 0.2s;
+    }
+    .partner-pill:hover { background: var(--gold); color: var(--white); border-color: var(--gold); }
+
+    /* ─── PAGE 4: PÚBLICO ─────────────────────────────── */
+    #publico {
+      background: var(--rose-pale);
+    }
+    .publico-inner {
+      max-width: 1100px; width: 100%;
+    }
+    .publico-inner .section-label,
+    .publico-inner .section-title,
+    .publico-inner .divider { text-align: center; margin-left: auto; margin-right: auto; }
+    .publico-inner .section-title { text-align: center; }
+
+    .publico-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      margin: 3rem 0; align-items: start;
+    }
+    .chart-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(200,132,154,0.1);
+      text-align: center;
+    }
+    .chart-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem; font-weight: 500;
+      margin-bottom: 1.5rem; color: var(--nude);
+    }
+    canvas { max-width: 100%; }
+
+    .publico-end { text-align: center; margin-top: 2rem; }
+
+    /* ─── PAGE 5: INVESTIMENTO ────────────────────────── */
+    #investimento {
+      background: var(--nude);
+      color: var(--cream);
+    }
+    #investimento .section-label { color: var(--gold); }
+    #investimento .section-title { color: var(--cream); text-align: center; }
+    #investimento .divider { margin: 1.5rem auto; }
+
+    .invest-inner {
+      max-width: 1100px; width: 100%;
+    }
+    .invest-inner .section-label,
+    .invest-inner .section-title { text-align: center; }
+
+    .invest-tables {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;
+    }
+    .invest-table-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem; margin-bottom: 1.5rem;
+      color: var(--rose-light); text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    thead tr th {
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(201,169,110,0.3);
+      text-align: left;
+    }
+    tbody tr td {
+      padding: 0.85rem 1rem;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      color: rgba(250,250,248,0.85);
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: rgba(200,132,154,0.08); }
+    .price-val {
+      font-family: var(--font-display);
+      font-size: 1.05rem; color: var(--rose-light); font-weight: 500;
+    }
+
+    /* Planos grid */
+    .planos-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem;
+      margin-top: 3rem;
+    }
+    .plano-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s;
+    }
+    .plano-card:hover { transform: translateY(-4px); }
+    .plano-card.destaque {
+      background: linear-gradient(135deg, rgba(200,132,154,0.2), rgba(201,169,110,0.15));
+      border-color: var(--gold);
+    }
+    .plano-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--rose), var(--gold));
+      color: var(--white); font-size: 0.6rem;
+      padding: 0.25rem 0.85rem; border-radius: 2rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      font-weight: 600; white-space: nowrap;
+    }
+    .plano-name {
+      font-family: var(--font-display); font-size: 1.1rem;
+      color: var(--rose-light); margin-bottom: 1rem;
+    }
+    .plano-price {
+      font-family: var(--font-display);
+      font-size: 2rem; color: var(--cream); font-weight: 600;
+    }
+    .plano-price span { font-size: 0.85rem; color: rgba(250,250,248,0.5); }
+    .plano-obs {
+      font-size: 0.68rem; color: rgba(250,250,248,0.4);
+      letter-spacing: 0.08em; margin-top: 0.5rem;
+    }
+
+    /* ─── PAGE 6: SIMULADOR + CONTATO ────────────────── */
+    #simulador {
+      background: var(--cream);
+      min-height: auto;
+      padding: 80px 2rem;
+    }
+    .simulador-inner {
+      max-width: 800px; width: 100%;
+    }
+    .simulador-inner .section-label,
+    .simulador-inner .section-title,
+    .simulador-inner .divider { text-align: center; }
+    .simulador-inner .section-title { text-align: center; }
+
+    .sim-services {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;
+      margin: 2rem 0;
+    }
+    .sim-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--rose-light);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+    }
+    .sim-item:hover { border-color: var(--rose); }
+    .sim-item.selected {
+      border-color: var(--rose);
+      background: var(--rose-pale);
+    }
+    .sim-item-left {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .sim-check {
+      width: 18px; height: 18px;
+      border: 1.5px solid var(--rose-light);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; flex-shrink: 0;
+    }
+    .sim-item.selected .sim-check {
+      background: var(--rose); border-color: var(--rose);
+    }
+    .sim-check-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--white);
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .sim-item.selected .sim-check-dot { opacity: 1; }
+    .sim-item-name { font-size: 0.85rem; font-weight: 500; color: var(--nude); }
+    .sim-item-price { font-family: var(--font-display); font-size: 0.95rem; color: var(--rose); }
+
+    .sim-total-box {
+      background: var(--nude);
+      border-radius: 4px;
+      padding: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      margin: 1.5rem 0;
+    }
+    .sim-total-label {
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(250,250,248,0.5);
+    }
+    .sim-total-value {
+      font-family: var(--font-display);
+      font-size: 2.2rem; color: var(--cream); font-weight: 600;
+    }
+    .sim-total-value span { font-size: 1rem; }
+
+    .sim-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── CONTATO ─────────────────────────────────────── */
+    #contato {
+      background: linear-gradient(135deg, var(--nude) 0%, #2C1A14 100%);
+      min-height: auto;
+      padding: 80px 2rem;
+    }
+    .contato-inner {
+      max-width: 700px; text-align: center;
+    }
+    #contato .section-label { color: var(--gold); }
+    #contato .section-title { color: var(--cream); text-align: center; }
+    #contato .divider { margin: 1.5rem auto; }
+
+    .contact-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2.5rem 0;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .contact-card:hover {
+      border-color: var(--rose);
+      background: rgba(200,132,154,0.12);
+      transform: translateY(-3px);
+    }
+    .contact-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+    .contact-platform {
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.35rem;
+    }
+    .contact-value { font-size: 0.82rem; color: var(--cream); }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      background: var(--nude);
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    footer p {
+      font-size: 0.72rem; color: rgba(250,250,248,0.35);
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── FLOATING WA ─────────────────────────────────── */
+    .wa-float {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+      animation: pulse 3s infinite;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.5); }
+    .wa-float svg { width: 28px; height: 28px; fill: var(--white); }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 6px 40px rgba(37,211,102,0.65); }
+    }
+
+    /* ─── SCROLL REVEAL ───────────────────────────────── */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.35s; }
+    .reveal-delay-4 { transition-delay: 0.5s; }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: rgba(250,250,248,0.97); padding: 1.5rem 2rem; gap: 1.2rem; border-bottom: 1px solid var(--rose-light); }
+      .hamburger { display: flex; }
+      .sobre-inner { grid-template-columns: 1fr; }
+      #sobre::before { display: none; }
+      .photo-frame img { height: 380px; }
+      .counters-grid { grid-template-columns: repeat(2, 1fr); }
+      .publico-grid { grid-template-columns: 1fr; }
+      .invest-tables { grid-template-columns: 1fr; }
+      .planos-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .sim-services { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 80px 1.25rem 60px; }
+      .counters-grid { grid-template-columns: repeat(2,1fr); gap: 1rem; }
+      .planos-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body class="bg-[#FCF9F6] text-brand-charcoal font-sans overflow-x-hidden">
+<body>
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-panel border-b border-white/40">
-        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
-            <!-- Logo Editorial -->
-            <a href="#" class="font-editorial text-2xl md:text-3xl tracking-widest font-semibold uppercase relative group">
-                Nicole Meira
-                <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-roseGold transition-all duration-500 group-hover:w-full"></span>
-            </a>
+<!-- ─── NAV ─────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-logo">Nicole <span>Meira</span></div>
+  <button class="hamburger" id="hamburger" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#essencia">Essência</a></li>
+    <li><a href="#metricas">Métricas</a></li>
+    <li><a href="#publico">Público</a></li>
+    <li><a href="#investimento">Valores</a></li>
+    <li><a href="#simulador">Simulador</a></li>
+    <li><a href="#contato" class="nav-cta">Contato</a></li>
+  </ul>
+</nav>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium">
-                <a href="#sobre" class="hover:text-brand-roseGold transition-colors">Sobre</a>
-                <a href="#metricas" class="hover:text-brand-roseGold transition-colors">Métricas</a>
-                <a href="#instagram" class="hover:text-brand-roseGold transition-colors">Instagram</a>
-                <a href="#servicos" class="hover:text-brand-roseGold transition-colors">Serviços</a>
-                <a href="#investimentos" class="hover:text-brand-roseGold transition-colors">Investimentos</a>
-                <a href="#simulador" class="hover:text-brand-roseGold transition-colors">Simulador</a>
-                <a href="#contato" class="hover:text-brand-roseGold transition-colors">Contato</a>
-            </nav>
-
-            <!-- CTA Header Button -->
-            <div class="hidden lg:block">
-                <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20gostaria%20de%20solicitar%20uma%20proposta%20comercial." 
-                   target="_blank"
-                   class="px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-widest bg-brand-roseGold text-white hover:bg-brand-charcoal transition-all duration-300 shadow-md hover:shadow-xl">
-                    Solicitar Proposta
-                </a>
-            </div>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button id="menu-btn" class="md:hidden p-2 text-brand-charcoal focus:outline-none" aria-label="Abrir Menu">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
+<!-- ─── PAGE 1: SOBRE MIM ─────────────────────────────────── -->
+<section id="sobre">
+  <div class="sobre-inner">
+    <div class="sobre-text">
+      <p class="section-label reveal">Mídia Kit 2025</p>
+      <h1 class="section-title reveal reveal-delay-1">Nicole<br><em>Meira</em></h1>
+      <div class="divider reveal reveal-delay-2"></div>
+      <div class="sobre-meta reveal reveal-delay-2">
+        <div class="sobre-meta-item">
+          <span>Idade</span><span>18 anos</span>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-[#FCF9F6] border-b border-brand-nudeDark shadow-lg transition-all duration-300 max-h-screen overflow-y-auto">
-            <div class="flex flex-col py-6 px-8 space-y-4 text-sm font-medium tracking-wider uppercase text-center">
-                <a href="#sobre" class="mobile-link py-2 border-b border-brand-nude/30 hover:text-brand-roseGold">Sobre</a>
-                <a href="#metricas" class="mobile-link py-2 border-b border-brand-nude/30 hover:text-brand-roseGold">Métricas</a>
-                <a href="#instagram" class="mobile-link py-2 border-b border-brand-nude/30 hover:text-brand-roseGold">Instagram</a>
-                <a href="#servicos" class="mobile-link py-2 border-b border-brand-nude/30 hover:text-brand-roseGold">Serviços</a>
-                <a href="#investimentos" class="mobile-link py-2 border-b border-brand-nude/30 hover:text-brand-roseGold">Investimentos</a>
-                <a href="#simulador" class="mobile-link py-2 border-b border-brand-nude/30 hover:text-brand-roseGold">Simulador</a>
-                <a href="#depoimentos" class="mobile-link py-2 border-b border-brand-nude/30 hover:text-brand-roseGold">Depoimentos</a>
-                <a href="#contato" class="mobile-link py-2 hover:text-brand-roseGold">Contato</a>
-                
-                <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20gostaria%20de%20solicitar%20uma%20proposta%20comercial." 
-                   target="_blank"
-                   class="mt-4 px-6 py-4 rounded-full text-xs font-semibold uppercase tracking-widest bg-brand-roseGold text-white text-center shadow-md">
-                    Solicitar Proposta
-                </a>
-            </div>
+        <div class="sobre-meta-item">
+          <span>Cidade</span><span>Guarapuava, PR</span>
         </div>
-    </header>
-
-    <!-- 1. HERO SECTION -->
-    <section id="inicio" class="relative min-h-screen pt-24 md:pt-0 flex items-center bg-[#FDFBF9] overflow-hidden">
-        <!-- Detalhes de Fundo (Elementos Flutuantes / Gradientes Artísticos) -->
-        <div class="absolute top-20 left-10 w-96 h-96 bg-brand-lightPink/60 rounded-full blur-3xl -z-10 animate-pulse"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-goldSoftLight/50 rounded-full blur-3xl -z-10"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 w-full py-12 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Conteúdo Textual (Lado Esquerdo no Desktop) -->
-            <div class="lg:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8 z-10 text-center lg:text-left order-2 lg:order-1">
-                <!-- Tag Sutil de Bem-Vindo -->
-                <div class="inline-flex items-center justify-center lg:justify-start space-x-2">
-                    <span class="w-8 h-[1px] bg-brand-roseGold hidden lg:block"></span>
-                    <span class="text-xs uppercase font-semibold tracking-[0.25em] text-brand-roseGold">Mídia Kit Oficial</span>
-                </div>
-                
-                <!-- Nome / Título Monumental -->
-                <h1 class="font-editorial text-6xl sm:text-7xl lg:text-8xl tracking-tight leading-none text-brand-charcoal">
-                    Nicole <span class="font-normal italic text-brand-roseGold">Meira</span>
-                </h1>
-                
-                <!-- Subtítulo de Nichos -->
-                <p class="font-sans text-xs sm:text-sm md:text-base tracking-[0.3em] uppercase text-brand-goldSoft font-semibold">
-                    Lifestyle • Moda • Beleza • Viagens • Eventos
-                </p>
-                
-                <!-- Descrição Curta Premium -->
-                <p class="font-sans text-lg md:text-xl text-zinc-500 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Conectando marcas ao público de forma autêntica, estratégica e humanizada.
-                </p>
-                
-                <!-- CTAs Elegantes -->
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                    <a href="https://wa.me/5521982898660?text=Olá%20Nicole!%20Amei%20seu%20Mídia%20Kit.%20Gostaria%20de%20solicitar%20uma%20proposta%20para%20minha%20marca."
-                       target="_blank"
-                       class="w-full sm:w-auto px-8 py-4 bg-brand-roseGold text-white font-medium text-sm rounded-full shadow-lg hover:shadow-brand-roseGold/20 hover:bg-brand-charcoal transition-all duration-300 text-center tracking-widest uppercase">
-                        Solicitar Proposta
-                    </a>
-                    <a href="#metricas"
-                       class="w-full sm:w-auto px-8 py-4 border border-brand-roseGold/40 text-brand-roseGold hover:bg-brand-roseGold hover:text-white font-medium text-sm rounded-full transition-all duration-300 text-center tracking-widest uppercase">
-                        Ver Mídia Kit
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Imagem de Destaque da Nicole (Lado Direito no Desktop) -->
-            <div class="lg:col-span-5 flex justify-center order-1 lg:order-2 z-10">
-                <div class="relative w-full max-w-[420px] aspect-[3/4]">
-                    <!-- Moldura Rose Gold Artística -->
-                    <div class="absolute inset-0 border border-brand-roseGold/20 translate-x-4 translate-y-4 rounded-3xl transition-transform duration-500 hover:translate-x-6 hover:translate-y-6"></div>
-                    
-                    <!-- Container da Foto Principal -->
-                    <div class="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl rose-gold-border">
-                        <img src="https://i.ibb.co/7td57FTk/IMG-1759.png" 
-                             alt="Nicole Meira - Foto Principal" 
-                             class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                             loading="eager"
-                             onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600'">
-                    </div>
-                    
-                    <!-- Tag flutuante com a localização da Nicole -->
-                    <div class="absolute -bottom-2 -left-4 glass-panel px-5 py-3 rounded-2xl shadow-lg flex items-center gap-2 border border-brand-roseGoldLight/40">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-roseGold"></i>
-                        <span class="text-xs font-semibold tracking-wider text-brand-charcoal">Guarapuava - PR</span>
-                    </div>
-                </div>
-            </div>
-
+        <div class="sobre-meta-item">
+          <span>Perfil</span><span>@nicolemeira_oficial</span>
         </div>
-    </section>
-
-    <!-- 2. SOBRE MIM -->
-    <section id="sobre" class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute top-1/2 left-0 w-80 h-80 bg-brand-lightPink/40 rounded-full blur-3xl -z-10"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
-            <!-- Foto Secundária e Detalhes Visuais (Lado Esquerdo) -->
-            <div class="lg:col-span-5 flex justify-center fade-in-up">
-                <div class="relative w-full max-w-[360px] aspect-[4/5]">
-                    <!-- Detalhe decorativo de fundo de revista -->
-                    <div class="absolute -top-6 -left-6 font-editorial text-8xl text-brand-roseGoldLight/20 select-none">NM</div>
-                    
-                    <!-- Moldura fina Dourada Suave -->
-                    <div class="absolute inset-0 border border-brand-goldSoft/30 -translate-x-3 translate-y-3 rounded-2xl"></div>
-                    
-                    <!-- Foto da Nicole -->
-                    <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-xl border border-brand-nudeDark">
-                        <img src="https://i.ibb.co/7NTyVWrP/IMG-1602.jpg" 
-                             alt="Nicole Meira - Apresentação" 
-                             class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                             onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600'">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Conteúdo Editorial (Lado Direito) -->
-            <div class="lg:col-span-7 space-y-6 fade-in-up">
-                <div class="space-y-2">
-                    <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">A Essência</span>
-                    <h2 class="font-editorial text-4xl sm:text-5xl text-brand-charcoal">Sobre Nicole Meira</h2>
-                </div>
-                
-                <hr class="w-16 border-brand-roseGold">
-                
-                <div class="space-y-5 text-zinc-600 font-light leading-relaxed text-base md:text-lg">
-                    <p class="font-editorial text-2xl text-brand-charcoal italic font-light">
-                        "Gerando conexões autênticas e transformando público em comunidade fiel."
-                    </p>
-                    <p>
-                        Sou Nicole Meira, criadora de conteúdo digital apaixonada por compartilhar experiências reais, estilo de vida, moda, beleza, viagens e momentos especiais. Com 18 anos e baseada em Guarapuava, Paraná, levo inspiração diária para dezenas de milhares de pessoas que buscam referências elegantes de estilo e uma vida equilibrada em propósito.
-                    </p>
-                    <p>
-                        Minha atuação une a estética sofisticada do mundo fashion ao engajamento caloroso dos valores cristãos e familiares. Meu objetivo como parceira estratégica é conectar marcas ao público de forma genuína, gerando confiança, identificação e resultados tangíveis e sustentáveis para o seu negócio.
-                    </p>
-                </div>
-
-                <!-- Lista de Informações Rápidas -->
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-brand-nude">
-                    <div>
-                        <p class="text-xs uppercase text-zinc-400 tracking-wider">Localização</p>
-                        <p class="font-medium text-brand-charcoal">Guarapuava, PR</p>
-                    </div>
-                    <div>
-                        <p class="text-xs uppercase text-zinc-400 tracking-wider">Idade</p>
-                        <p class="font-medium text-brand-charcoal">18 Anos</p>
-                    </div>
-                    <div>
-                        <p class="text-xs uppercase text-zinc-400 tracking-wider">Instagram</p>
-                        <p class="font-medium text-brand-roseGold font-semibold">@nicolemeira_oficial</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 3. MÉTRICAS (Contadores Animados e Gráficos Modernos) -->
-    <section id="metricas" class="py-24 bg-brand-lightPink/30 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">Transparência & Performance</span>
-                <h2 class="font-editorial text-4xl md:text-5xl text-brand-charcoal">Nossos Números</h2>
-                <p class="text-sm text-zinc-500 font-light">Dados extraídos diretamente do Instagram Insights. Desempenho real focado em alcance orgânico qualificado.</p>
-            </div>
-
-            <!-- Grid de Contadores Animados -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
-                
-                <!-- Contador 1: Seguidores -->
-                <div class="glass-panel p-6 md:p-8 rounded-3xl border border-white text-center shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="users" class="w-6 h-6 text-brand-roseGold"></i>
-                    </div>
-                    <p class="text-3xl md:text-4xl font-semibold text-brand-charcoal font-editorial tracking-tight">
-                        <span class="counter" data-target="93">0</span>K
-                    </p>
-                    <p class="text-xs uppercase tracking-wider text-zinc-500 mt-2">Seguidores no IG</p>
-                </div>
-
-                <!-- Contador 2: Alcance Mensal -->
-                <div class="glass-panel p-6 md:p-8 rounded-3xl border border-white text-center shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="eye" class="w-6 h-6 text-brand-roseGold"></i>
-                    </div>
-                    <p class="text-3xl md:text-4xl font-semibold text-brand-charcoal font-editorial tracking-tight">
-                        <span class="counter" data-target="400">0</span>K+
-                    </p>
-                    <p class="text-xs uppercase tracking-wider text-zinc-500 mt-2">Contas Alcançadas / Mês</p>
-                </div>
-
-                <!-- Contador 3: Visualizações Reels -->
-                <div class="glass-panel p-6 md:p-8 rounded-3xl border border-white text-center shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="play" class="w-6 h-6 text-brand-roseGold"></i>
-                    </div>
-                    <p class="text-3xl md:text-4xl font-semibold text-brand-charcoal font-editorial tracking-tight">
-                        <span class="counter" data-target="30">0</span>K+
-                    </p>
-                    <p class="text-xs uppercase tracking-wider text-zinc-500 mt-2">Média de Views / Reels</p>
-                </div>
-
-                <!-- Contador 4: Visualizações Stories -->
-                <div class="glass-panel p-6 md:p-8 rounded-3xl border border-white text-center shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="phone-call" class="w-6 h-6 text-brand-roseGold"></i>
-                    </div>
-                    <p class="text-3xl md:text-4xl font-semibold text-brand-charcoal font-editorial tracking-tight">
-                        <span class="counter" data-target="3">0</span>K+
-                    </p>
-                    <p class="text-xs uppercase tracking-wider text-zinc-500 mt-2">Média de Views / Stories</p>
-                </div>
-
-            </div>
-
-            <!-- Gráfico Editorial de Desempenho de Crescimento Semanal -->
-            <div class="glass-panel p-8 rounded-3xl border border-white shadow-sm hover:shadow-md max-w-4xl mx-auto fade-in-up">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                    <div>
-                        <h3 class="font-editorial text-2xl text-brand-charcoal">Desempenho Geral e Relevância</h3>
-                        <p class="text-xs text-zinc-400 uppercase tracking-widest mt-1">Comparativo de Engajamento por Canal</p>
-                    </div>
-                    <div class="flex items-center space-x-4 mt-4 md:mt-0 text-xs">
-                        <span class="inline-flex items-center gap-1"><span class="w-3 h-3 bg-[#B76E79] rounded-full"></span> Reels</span>
-                        <span class="inline-flex items-center gap-1"><span class="w-3 h-3 bg-[#C5A059] rounded-full"></span> Stories</span>
-                    </div>
-                </div>
-
-                <!-- Simulação Elegante de Gráfico de Barras -->
-                <div class="space-y-6 pt-4">
-                    <!-- Barra 1: Engajamento Reels -->
-                    <div class="space-y-2">
-                        <div class="flex justify-between text-xs font-semibold uppercase tracking-wider">
-                            <span>Taxa de Retenção (Reels)</span>
-                            <span class="text-brand-roseGold">85%</span>
-                        </div>
-                        <div class="h-3 bg-white rounded-full overflow-hidden border border-brand-nude">
-                            <div class="h-full bg-brand-roseGold rounded-full transition-all duration-1000 ease-out" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Barra 2: Interação Stories -->
-                    <div class="space-y-2">
-                        <div class="flex justify-between text-xs font-semibold uppercase tracking-wider">
-                            <span>Respostas & Conversas (Stories)</span>
-                            <span class="text-brand-goldSoft">92%</span>
-                        </div>
-                        <div class="h-3 bg-white rounded-full overflow-hidden border border-brand-nude">
-                            <div class="h-full bg-brand-goldSoft rounded-full transition-all duration-1000 ease-out" style="width: 92%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Barra 3: Fidelidade de Audiência -->
-                    <div class="space-y-2">
-                        <div class="flex justify-between text-xs font-semibold uppercase tracking-wider">
-                            <span>Fidelidade do Público Comprador</span>
-                            <span class="text-brand-roseGold">78%</span>
-                        </div>
-                        <div class="h-3 bg-white rounded-full overflow-hidden border border-brand-nude">
-                            <div class="h-full bg-brand-roseGoldLight rounded-full transition-all duration-1000 ease-out" style="width: 78%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 4. PÚBLICO (Gráficos Sofisticados de Gênero e Idade) -->
-    <section id="publico" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">Dados Demográficos</span>
-                <h2 class="font-editorial text-4xl md:text-5xl text-brand-charcoal">Com quem conversamos?</h2>
-                <p class="text-sm text-zinc-500 font-light">Perfil detalhado da audiência de Nicole Meira. Consumidores com alto poder de decisão.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-                
-                <!-- Card Gênero (Mulheres / Homens) -->
-                <div class="glass-panel p-8 rounded-3xl border border-brand-nude flex flex-col justify-between h-full fade-in-up">
-                    <div class="mb-8">
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-2">Gênero</h3>
-                        <p class="text-xs text-zinc-400 uppercase tracking-widest">Altíssima concentração do público feminino</p>
-                    </div>
-
-                    <!-- Visualização Gráfica do Gênero -->
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-end">
-                            <div class="text-left">
-                                <span class="block text-4xl font-editorial text-brand-roseGold font-semibold">78%</span>
-                                <span class="text-xs uppercase text-zinc-500 tracking-wider">Feminino</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="block text-3xl font-editorial text-brand-charcoal font-semibold">22%</span>
-                                <span class="text-xs uppercase text-zinc-500 tracking-wider">Masculino</span>
-                            </div>
-                        </div>
-
-                        <!-- Barra de Proporção Colorida -->
-                        <div class="h-4 w-full flex rounded-full overflow-hidden bg-brand-nude">
-                            <div class="h-full bg-brand-roseGold transition-all duration-1000" style="width: 78%;"></div>
-                            <div class="h-full bg-zinc-300 transition-all duration-1000" style="width: 22%;"></div>
-                        </div>
-
-                        <div class="text-xs text-zinc-500 italic mt-2">
-                            * Nichos ideais para marcas de moda, maquiagem, skincare, estética, estilo de vida e produtos de consumo pessoal.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card Faixa Etária (Gráfico Moderno) -->
-                <div class="glass-panel p-8 rounded-3xl border border-brand-nude flex flex-col justify-between h-full fade-in-up">
-                    <div class="mb-6">
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-2">Faixa Etária</h3>
-                        <p class="text-xs text-zinc-400 uppercase tracking-widest">Público jovem-adulto e decisor de compras</p>
-                    </div>
-
-                    <!-- Gráfico de Faixas Etárias -->
-                    <div class="space-y-4">
-                        
-                        <!-- Item 1: 25 a 34 anos (Destaque Principal) -->
-                        <div class="flex items-center space-x-4">
-                            <span class="w-24 text-xs font-semibold text-zinc-600">25 a 34 anos</span>
-                            <div class="flex-1 h-6 bg-brand-lightPink rounded-full overflow-hidden">
-                                <div class="h-full bg-brand-roseGold rounded-full flex items-center justify-end pr-3 transition-all duration-1000" style="width: 48%;">
-                                    <span class="text-[10px] text-white font-bold">48%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 2: 18 a 24 anos -->
-                        <div class="flex items-center space-x-4">
-                            <span class="w-24 text-xs font-semibold text-zinc-600">18 a 24 anos</span>
-                            <div class="flex-1 h-6 bg-brand-lightPink rounded-full overflow-hidden">
-                                <div class="h-full bg-brand-roseGoldLight rounded-full flex items-center justify-end pr-3 transition-all duration-1000" style="width: 35%;">
-                                    <span class="text-[10px] text-brand-charcoal font-bold">35%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 3: 35 a 44 anos -->
-                        <div class="flex items-center space-x-4">
-                            <span class="w-24 text-xs font-semibold text-zinc-600">35 a 44 anos</span>
-                            <div class="flex-1 h-6 bg-brand-lightPink rounded-full overflow-hidden">
-                                <div class="h-full bg-brand-goldSoftLight rounded-full flex items-center justify-end pr-3 transition-all duration-1000" style="width: 17%;">
-                                    <span class="text-[10px] text-brand-charcoal font-bold">17%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    
-                    <div class="text-xs text-zinc-500 mt-6 pt-4 border-t border-brand-nude">
-                        <strong>83%</strong> da audiência ativa está compreendida entre <strong>18 e 34 anos</strong>, representando o maior potencial de conversão do mercado digital.
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 5. INSTAGRAM AO VIVO (ATUALIZADO COM LINKS REAIS) -->
-<section id="instagram" class="py-24 bg-brand-lightPink/20 relative">
-    <div class="max-w-7xl mx-auto px-6">
-
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">
-                No Instagram
-            </span>
-            <h2 class="font-editorial text-4xl md:text-5xl text-brand-charcoal">
-                @nicolemeira_oficial
-            </h2>
-            <p class="text-sm text-zinc-500 font-light">
-                Acompanhe conteúdos reais do perfil.
-            </p>
-        </div>
-
-        <!-- GRID PREMIUM -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-
-            <!-- POST -->
-            <div onclick="openModal('https://www.instagram.com/p/DW-RKQzDFpu/')"
-                 class="aspect-square rounded-2xl overflow-hidden bg-black cursor-pointer group relative">
-
-                <img src="https://images.unsplash.com/photo-1520975922284-7c0c6c2a1c1f"
-                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100
-                            flex items-center justify-center transition">
-                    <div class="text-white text-xs text-center">
-                        ❤️ 12.4k<br>💬 320
-                    </div>
-                </div>
-            </div>
-
-            <!-- REEL -->
-            <div onclick="openModal('https://www.instagram.com/reel/DXE1T9yDtXg/')"
-                 class="aspect-square rounded-2xl overflow-hidden bg-black cursor-pointer group relative">
-
-                <img src="https://images.unsplash.com/photo-1520975693411-b8c8c0d0f1a0"
-                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100
-                            flex items-center justify-center transition">
-                    <div class="text-white text-xs text-center">
-                        ❤️ 8.1k<br>🔥 REEL
-                    </div>
-                </div>
-            </div>
-
-            <!-- REEL -->
-            <div onclick="openModal('https://www.instagram.com/reel/DMimActRKbs/')"
-                 class="aspect-square rounded-2xl overflow-hidden bg-black cursor-pointer group relative">
-
-                <img src="https://images.unsplash.com/photo-1520975747528-8b0c9d9c1a1e"
-                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100
-                            flex items-center justify-center transition">
-                    <div class="text-white text-xs text-center">
-                        ❤️ 20.3k<br>🔥 REEL
-                    </div>
-                </div>
-            </div>
-
-            <!-- REEL -->
-            <div onclick="openModal('https://www.instagram.com/reel/DSsEHofDXzJ/')"
-                 class="aspect-square rounded-2xl overflow-hidden bg-black cursor-pointer group relative">
-
-                <img src="https://images.unsplash.com/photo-1520975800855-1a2c0f0c0b2e"
-                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100
-                            flex items-center justify-center transition">
-                    <div class="text-white text-xs text-center">
-                        ❤️ 5.9k<br>🔥 REEL
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- BOTÃO -->
-        <div class="text-center mt-12">
-            <a href="https://www.instagram.com/nicolemeira_oficial" target="_blank"
-               class="inline-flex items-center gap-2 px-8 py-4 bg-brand-charcoal text-white rounded-full text-xs uppercase tracking-widest hover:bg-brand-roseGold transition">
-                Ver perfil completo
-            </a>
-        </div>
-
+      </div>
+      <div class="content-tags reveal reveal-delay-3">
+        <span class="tag">✦ Lifestyle</span>
+        <span class="tag">✦ Moda</span>
+        <span class="tag">✦ Vida Cristã</span>
+        <span class="tag">✦ Estética</span>
+      </div>
+      <p class="sobre-p reveal reveal-delay-3">
+        Criadora de conteúdo digital com presença autêntica, conectando marcas a uma comunidade engajada de dezenas de milhares de pessoas que buscam referências elegantes de estilo e propósito de vida.
+      </p>
+      <div class="btn-group reveal reveal-delay-4">
+        <a href="#contato" class="btn-primary">Solicitar Proposta</a>
+        <a href="#investimento" class="btn-secondary">Ver Mídia Kit</a>
+      </div>
     </div>
-
-    <!-- MODAL -->
-    <div id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
-        <div class="bg-white rounded-xl p-6 max-w-sm w-full text-center space-y-4">
-            <p class="text-sm text-zinc-600">Abrir no Instagram?</p>
-            <button id="goLink" class="bg-black text-white px-5 py-2 rounded-full text-xs uppercase">
-                Abrir
-            </button>
-            <button onclick="closeModal()" class="text-xs text-zinc-400 block mx-auto">
-                Cancelar
-            </button>
-        </div>
+    <div class="sobre-photo reveal reveal-delay-2">
+      <div class="photo-frame">
+        <img
+          src="https://res.cloudinary.com/dpfjiwvcp/image/upload/f_auto,q_auto/IMG_1759_ovceqt"
+          alt="Nicole Meira — influenciadora digital"
+          loading="eager"
+        />
+      </div>
+      <div class="photo-accent"></div>
+      <div class="photo-accent2"></div>
     </div>
+  </div>
 </section>
 
+<!-- ─── PAGE 2: ESSÊNCIA ───────────────────────────────────── -->
+<section id="essencia">
+  <div class="essencia-inner">
+    <p class="section-label reveal">A Essência</p>
+    <blockquote class="essencia-quote reveal reveal-delay-1">
+      Gerando conexões autênticas e transformando público em comunidade fiel.
+    </blockquote>
+    <div class="divider reveal reveal-delay-2"></div>
+    <h2 class="section-title reveal reveal-delay-2" style="margin-bottom:2rem;">Quem é Nicole Meira</h2>
+    <p class="essencia-body reveal reveal-delay-3">
+      Sou <span class="essencia-highlight">Nicole Meira</span>, criadora de conteúdo digital apaixonada por compartilhar experiências reais, estilo de vida, moda, beleza, viagens e momentos especiais. Com <span class="essencia-highlight">18 anos</span> e baseada em <span class="essencia-highlight">Guarapuava, Paraná</span>, levo inspiração diária para dezenas de milhares de pessoas que buscam referências elegantes de estilo e uma vida equilibrada em propósito.
+    </p>
+    <p class="essencia-body reveal reveal-delay-4">
+      Minha atuação une a <span class="essencia-highlight">estética sofisticada do mundo fashion</span> ao engajamento caloroso dos valores cristãos e familiares. Meu objetivo como parceira estratégica é conectar marcas ao público de forma genuína, gerando <span class="essencia-highlight">confiança, identificação e resultados tangíveis</span> e sustentáveis para o seu negócio.
+    </p>
+  </div>
+</section>
+
+<!-- ─── PAGE 3: MÉTRICAS ───────────────────────────────────── -->
+<section id="metricas">
+  <div class="metricas-inner">
+    <p class="section-label reveal">Transparência & Performance</p>
+    <h2 class="section-title reveal reveal-delay-1">Métricas que<br><em>falam por si</em></h2>
+    <div class="divider reveal reveal-delay-2"></div>
+
+    <div class="counters-grid">
+      <div class="counter-card reveal reveal-delay-1">
+        <div class="counter-icon">👥</div>
+        <div class="counter-number" data-target="93" data-suffix="k">
+          <span class="count">0</span><span class="suffix">k</span>
+        </div>
+        <div class="counter-label">Seguidores</div>
+      </div>
+      <div class="counter-card reveal reveal-delay-2">
+        <div class="counter-icon">📡</div>
+        <div class="counter-number" data-target="1.3" data-suffix="M" data-decimal="true">
+          <span class="count">0</span><span class="suffix">M</span>
+        </div>
+        <div class="counter-label">Contas alcançadas / mês</div>
+      </div>
+      <div class="counter-card reveal reveal-delay-3">
+        <div class="counter-icon">🎬</div>
+        <div class="counter-number" data-target="1" data-suffix="M">
+          <span class="count">0</span><span class="suffix">M</span>
+        </div>
+        <div class="counter-label">Visualizações em Reels</div>
+      </div>
+      <div class="counter-card reveal reveal-delay-4">
+        <div class="counter-icon">📱</div>
+        <div class="counter-number" data-target="4" data-suffix="k">
+          <span class="count">0</span><span class="suffix">k</span>
+        </div>
+        <div class="counter-label">Visualizações em Stories</div>
+      </div>
+    </div>
+
+    <div class="partners-section reveal">
+      <p class="partners-title">Marcas & Parcerias</p>
+      <div class="partners-grid">
+        <span class="partner-pill">Farmácia Trajano</span>
+        <span class="partner-pill">We Pink</span>
+        <span class="partner-pill">Havaianas</span>
+        <span class="partner-pill">SuperPão Supermercado</span>
+        <span class="partner-pill">Maybelline</span>
+        <span class="partner-pill">L'Oréal Paris</span>
+        <span class="partner-pill">Thermas de Jurema</span>
+        <span class="partner-pill">Bom Jesus Curitiba</span>
+        <span class="partner-pill">Cobeu</span>
+        <span class="partner-pill">RPC</span>
+        <span class="partner-pill">Prime Video</span>
+        <span class="partner-pill">Unimed</span>
+        <span class="partner-pill">Cebrac</span>
+        <span class="partner-pill">Laboratório Mestre</span>
+        <span class="partner-pill">+ outros</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PAGE 4: PÚBLICO ────────────────────────────────────── -->
+<section id="publico">
+  <div class="publico-inner">
+    <p class="section-label reveal">Dados da Audiência</p>
+    <h2 class="section-title reveal reveal-delay-1">Conheça o<br><em>meu público</em></h2>
+    <div class="divider reveal reveal-delay-2"></div>
+
+    <div class="publico-grid">
+      <div class="chart-card reveal reveal-delay-2">
+        <h3>Gênero da Audiência</h3>
+        <canvas id="chartGenero" height="220"></canvas>
+      </div>
+      <div class="chart-card reveal reveal-delay-3">
+        <h3>Faixa Etária</h3>
+        <canvas id="chartIdade" height="220"></canvas>
+      </div>
+    </div>
+
+    <div class="publico-end reveal">
+      <a href="https://instagram.com/nicolemeira_oficial" target="_blank" class="btn-primary">
+        Ver Perfil Completo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PAGE 5: INVESTIMENTO ──────────────────────────────── -->
+<section id="investimento">
+  <div class="invest-inner">
+    <p class="section-label reveal">Tabela de Valores</p>
+    <h2 class="section-title reveal reveal-delay-1">Investimento &<br><em>Serviços</em></h2>
+    <div class="divider reveal reveal-delay-2"></div>
+
+    <div class="invest-tables">
+      <div class="reveal reveal-delay-2">
+        <p class="invest-table-title">Publicações Avulsas</p>
+        <table>
+          <thead><tr><th>Serviço</th><th>Valor</th></tr></thead>
+          <tbody>
+            <tr><td>Stories (3 stories)</td><td class="price-val">R$ 350</td></tr>
+            <tr><td>Stories Premium (10 stories)</td><td class="price-val">R$ 600</td></tr>
+            <tr><td>Reels</td><td class="price-val">R$ 750</td></tr>
+            <tr><td>Foto Feed + Stories</td><td class="price-val">R$ 900</td></tr>
+            <tr><td>Reels + Stories</td><td class="price-val">R$ 1.100</td></tr>
+            <tr><td>Cobertura de Eventos</td><td class="price-val">R$ 800 – R$ 1.500</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reveal reveal-delay-3">
+        <p class="invest-table-title">Pacotes Mensais <span style="font-size:0.7rem;color:rgba(250,250,248,0.4);font-family:var(--font-body)">(mín. 3 meses)</span></p>
+        <table>
+          <thead><tr><th>Plano</th><th>Valor/mês</th></tr></thead>
+          <tbody>
+            <tr><td>🥉 Bronze</td><td class="price-val">R$ 500</td></tr>
+            <tr><td>🥈 Prata</td><td class="price-val">R$ 850</td></tr>
+            <tr><td>🥇 Ouro</td><td class="price-val">R$ 1.500</td></tr>
+            <tr><td>💎 Diamante</td><td class="price-val">R$ 2.500</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="planos-grid">
+      <div class="plano-card reveal reveal-delay-1">
+        <div class="plano-name">🥉 Bronze</div>
+        <div class="plano-price">R$ 500<span>/mês</span></div>
+        <div class="plano-obs">mínimo 3 meses</div>
+      </div>
+      <div class="plano-card reveal reveal-delay-2">
+        <div class="plano-name">🥈 Prata</div>
+        <div class="plano-price">R$ 850<span>/mês</span></div>
+        <div class="plano-obs">mínimo 3 meses</div>
+      </div>
+      <div class="plano-card destaque reveal reveal-delay-3">
+        <div class="plano-badge">⭐ Mais Recomendado</div>
+        <div class="plano-name">🥇 Ouro</div>
+        <div class="plano-price">R$ 1.500<span>/mês</span></div>
+        <div class="plano-obs">mínimo 3 meses</div>
+      </div>
+      <div class="plano-card reveal reveal-delay-4">
+        <div class="plano-name">💎 Diamante</div>
+        <div class="plano-price">R$ 2.500<span>/mês</span></div>
+        <div class="plano-obs">mínimo 3 meses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PAGE 6: SIMULADOR ─────────────────────────────────── -->
+<section id="simulador">
+  <div class="simulador-inner">
+    <p class="section-label reveal">Monte sua campanha</p>
+    <h2 class="section-title reveal reveal-delay-1">Simulador de<br><em>Orçamento</em></h2>
+    <div class="divider reveal reveal-delay-2"></div>
+    <p style="text-align:center;font-size:0.85rem;color:var(--nude-soft);margin-bottom:1.5rem;" class="reveal reveal-delay-2">
+      Selecione os serviços desejados e visualize o investimento em tempo real.
+    </p>
+
+    <div class="sim-services reveal reveal-delay-3" id="simServices">
+      <!-- items rendered via JS -->
+    </div>
+
+    <div class="sim-total-box reveal reveal-delay-3">
+      <div>
+        <div class="sim-total-label">Total estimado</div>
+        <div class="sim-total-value"><span>R$</span> <span id="simTotal">0</span></div>
+      </div>
+      <div style="font-size:0.78rem;color:rgba(250,250,248,0.4);max-width:200px;text-align:right;">
+        Valores sujeitos a alteração conforme escopo final da campanha.
+      </div>
+    </div>
+
+    <div class="sim-actions reveal reveal-delay-4">
+      <button class="btn-secondary" onclick="clearSim()">Limpar seleção</button>
+      <button class="btn-primary" onclick="openWhatsApp()">Enviar proposta via WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTATO ───────────────────────────────────────────── -->
+<section id="contato">
+  <div class="contato-inner">
+    <p class="section-label reveal">Vamos trabalhar juntos?</p>
+    <h2 class="section-title reveal reveal-delay-1">Entre em<br><em>contato</em></h2>
+    <div class="divider reveal reveal-delay-2"></div>
+    <p style="font-size:0.88rem;color:rgba(250,250,248,0.6);margin-bottom:1rem;" class="reveal reveal-delay-2">
+      Estou pronta para conectar a sua marca com uma audiência real e engajada.
+    </p>
+
+    <div class="contact-grid">
+      <a href="https://wa.me/5521982898660?text=Olá%20Nicole!%20Vim%20pelo%20seu%20mídia%20kit%20e%20gostaria%20de%20conversar%20sobre%20uma%20parceria."
+         target="_blank" class="contact-card reveal reveal-delay-1">
+        <div class="contact-icon">💬</div>
+        <div class="contact-platform">WhatsApp</div>
+        <div class="contact-value">(21) 98289-8660</div>
+      </a>
+      <a href="https://instagram.com/nicolemeira_oficial" target="_blank" class="contact-card reveal reveal-delay-2">
+        <div class="contact-icon">📸</div>
+        <div class="contact-platform">Instagram</div>
+        <div class="contact-value">@nicolemeira_oficial</div>
+      </a>
+      <a href="mailto:godoi.nini@gmail.com" class="contact-card reveal reveal-delay-3">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-platform">E-mail</div>
+        <div class="contact-value">godoi.nini@gmail.com</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer>
+  <p>© 2025 Nicole Meira — Todos os direitos reservados</p>
+</footer>
+
+<!-- ─── FLOATING WA ───────────────────────────────────────── -->
+<a class="wa-float"
+   href="https://wa.me/5521982898660?text=Olá%20Nicole!%20Vim%20pelo%20seu%20mídia%20kit%20e%20gostaria%20de%20conversar%20sobre%20uma%20parceria."
+   target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ─── SCRIPTS ───────────────────────────────────────────── -->
 <script>
-let currentLink = "";
+// ── NAV hamburger ──────────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const navlinks  = document.getElementById('navlinks');
+hamburger.addEventListener('click', () => navlinks.classList.toggle('open'));
+navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
 
-function openModal(link) {
-    currentLink = link;
-    document.getElementById("modal").classList.remove("hidden");
-    document.getElementById("modal").classList.add("flex");
+// ── Scroll reveal ──────────────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
 
-    document.getElementById("goLink").onclick = () => {
-        window.open(currentLink, "_blank");
-    };
+// ── Animated counters ──────────────────────────────────────
+function animateCounters() {
+  document.querySelectorAll('.counter-number').forEach(el => {
+    const target   = parseFloat(el.dataset.target);
+    const decimal  = el.dataset.decimal === 'true';
+    const countEl  = el.querySelector('.count');
+    const duration = 1800;
+    const start    = performance.now();
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const val  = target * ease;
+      countEl.textContent = decimal ? val.toFixed(1) : Math.floor(val);
+      if (progress < 1) requestAnimationFrame(step);
+      else countEl.textContent = decimal ? target.toFixed(1) : target;
+    }
+    requestAnimationFrame(step);
+  });
+}
+const metricsSec = document.getElementById('metricas');
+const metricsIO  = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) { animateCounters(); metricsIO.disconnect(); }
+}, { threshold: 0.25 });
+metricsIO.observe(metricsSec);
+
+// ── Charts ─────────────────────────────────────────────────
+const chartPubIO = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) { buildCharts(); chartPubIO.disconnect(); }
+}, { threshold: 0.2 });
+chartPubIO.observe(document.getElementById('publico'));
+
+function buildCharts() {
+  // Gênero (doughnut)
+  new Chart(document.getElementById('chartGenero'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Mulheres 78%', 'Homens 22%'],
+      datasets: [{
+        data: [78, 22],
+        backgroundColor: ['#C8849A', '#C9A96E'],
+        borderWidth: 0,
+        hoverOffset: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      cutout: '70%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: 'Inter', size: 12 }, color: '#4A3728', padding: 16, boxWidth: 12 }
+        },
+        tooltip: {
+          callbacks: { label: ctx => ` ${ctx.label}` }
+        }
+      }
+    }
+  });
+
+  // Faixa etária (bar)
+  new Chart(document.getElementById('chartIdade'), {
+    type: 'bar',
+    data: {
+      labels: ['18 – 24', '25 – 34', '35 – 44'],
+      datasets: [{
+        label: 'Audiência (%)',
+        data: [31, 42, 18],
+        backgroundColor: ['#C8849A', '#E8C4C4', '#C9A96E'],
+        borderRadius: 6,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: ctx => ` ${ctx.raw}% da audiência` }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true, max: 60,
+          ticks: { font: { size: 11 }, color: '#7A6255', callback: v => v + '%' },
+          grid: { color: 'rgba(200,132,154,0.1)' }
+        },
+        x: {
+          ticks: { font: { size: 11 }, color: '#4A3728' },
+          grid: { display: false }
+        }
+      }
+    }
+  });
 }
 
-function closeModal() {
-    document.getElementById("modal").classList.add("hidden");
-    document.getElementById("modal").classList.remove("flex");
+// ── Simulator ──────────────────────────────────────────────
+const services = [
+  { name: 'Stories (3 stories)',      price: 350  },
+  { name: 'Stories Premium (10)',     price: 600  },
+  { name: 'Reels',                    price: 750  },
+  { name: 'Foto Feed + Stories',      price: 900  },
+  { name: 'Reels + Stories',          price: 1100 },
+  { name: 'Cobertura de Eventos',     price: 1000 },
+  { name: 'Plano Bronze / mês',       price: 500  },
+  { name: 'Plano Prata / mês',        price: 850  },
+  { name: 'Plano Ouro / mês',         price: 1500 },
+  { name: 'Plano Diamante / mês',     price: 2500 },
+];
+let selected = new Set();
+
+function renderSim() {
+  const container = document.getElementById('simServices');
+  container.innerHTML = services.map((s, i) => `
+    <div class="sim-item${selected.has(i) ? ' selected' : ''}" onclick="toggleSim(${i})">
+      <div class="sim-item-left">
+        <div class="sim-check"><div class="sim-check-dot"></div></div>
+        <div class="sim-item-name">${s.name}</div>
+      </div>
+      <div class="sim-item-price">R$ ${s.price.toLocaleString('pt-BR')}</div>
+    </div>
+  `).join('');
 }
+
+function toggleSim(i) {
+  selected.has(i) ? selected.delete(i) : selected.add(i);
+  renderSim();
+  updateTotal();
+}
+
+function updateTotal() {
+  const total = [...selected].reduce((acc, i) => acc + services[i].price, 0);
+  document.getElementById('simTotal').textContent = total.toLocaleString('pt-BR');
+}
+
+function clearSim() {
+  selected.clear(); renderSim(); updateTotal();
+}
+
+function openWhatsApp() {
+  if (selected.size === 0) { alert('Selecione ao menos um serviço.'); return; }
+  const items = [...selected].map(i => `• ${services[i].name}: R$ ${services[i].price.toLocaleString('pt-BR')}`).join('\n');
+  const total = [...selected].reduce((acc, i) => acc + services[i].price, 0);
+  const msg = encodeURIComponent(
+    `Olá Nicole! 👋\nVim pelo seu mídia kit e gostaria de fechar uma parceria.\n\n*Serviços selecionados:*\n${items}\n\n*Total estimado: R$ ${total.toLocaleString('pt-BR')}*\n\nAguardo seu retorno! 😊`
+  );
+  window.open(`https://wa.me/5521982898660?text=${msg}`, '_blank');
+}
+
+renderSim();
 </script>
-
-    <!-- 6. SERVIÇOS (Cards Luxuosos) -->
-    <section id="servicos" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold font-sans">Como podemos colaborar?</span>
-                <h2 class="font-editorial text-4xl md:text-5xl text-brand-charcoal">Formatos de Anúncio</h2>
-                <p class="text-sm text-zinc-500 font-light">Opções pensadas estrategicamente para gerar a maior taxa de conversão e awareness para sua marca.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Card 1: Stories -->
-                <div class="group border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:bg-brand-lightPink/20 hover:border-brand-roseGoldLight/60 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="play-circle" class="w-6 h-6 text-brand-roseGold"></i>
-                        </div>
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Stories</h3>
-                        <p class="text-zinc-500 text-sm font-light leading-relaxed">
-                            Formato dinâmico ideal para lançamentos diários, cupons de desconto, links de direcionamento e demonstrações práticas de produtos. Alto engajamento imediato.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-brand-nude text-xs uppercase font-semibold tracking-widest text-brand-roseGold">
-                        Ideal para Cliques e Vendas Rápidas
-                    </div>
-                </div>
-
-                <!-- Card 2: Reels -->
-                <div class="group border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:bg-brand-lightPink/20 hover:border-brand-roseGoldLight/60 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="film" class="w-6 h-6 text-brand-roseGold"></i>
-                        </div>
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Reels</h3>
-                        <p class="text-zinc-500 text-sm font-light leading-relaxed">
-                            Vídeos dinâmicos, estéticos e altamente virais. Perfeito para apresentar a versatilidade de um look, rotinas de skincare ou destinos de viagem com edição premium.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-brand-nude text-xs uppercase font-semibold tracking-widest text-brand-roseGold">
-                        Maximização de Alcance & Viralização
-                    </div>
-                </div>
-
-                <!-- Card 3: Feed -->
-                <div class="group border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:bg-brand-lightPink/20 hover:border-brand-roseGoldLight/60 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="image" class="w-6 h-6 text-brand-roseGold"></i>
-                        </div>
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Feed</h3>
-                        <p class="text-zinc-500 text-sm font-light leading-relaxed">
-                            Uma vitrine sofisticada e eterna no perfil de Nicole. Fotografia editorial pensada minuciosamente para integrar estética artística e a essência da marca anunciada.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-brand-nude text-xs uppercase font-semibold tracking-widest text-brand-roseGold">
-                        Autoridade Visual de Longo Prazo
-                    </div>
-                </div>
-
-                <!-- Card 4: Eventos -->
-                <div class="group border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:bg-brand-lightPink/20 hover:border-brand-roseGoldLight/60 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="map-pin" class="w-6 h-6 text-brand-roseGold"></i>
-                        </div>
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Cobertura de Eventos</h3>
-                        <p class="text-zinc-500 text-sm font-light leading-relaxed">
-                            Nicole comparece presencialmente à sua inauguração, desfile ou lançamento de marca, produzindo conteúdo em tempo real compartilhando as melhores sensações de forma espontânea.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-brand-nude text-xs uppercase font-semibold tracking-widest text-brand-roseGold">
-                        Presença Física & Conexão Real
-                    </div>
-                </div>
-
-                <!-- Card 5: Conteúdo UGC -->
-                <div class="group border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:bg-brand-lightPink/20 hover:border-brand-roseGoldLight/60 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="video" class="w-6 h-6 text-brand-roseGold"></i>
-                        </div>
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Conteúdo UGC</h3>
-                        <p class="text-zinc-500 text-sm font-light leading-relaxed">
-                            Gravação e edição de conteúdo qualificado para que a sua própria marca publique nos canais oficiais, mantendo a linguagem nativa, dinâmica e altamente persuasiva das redes.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-brand-nude text-xs uppercase font-semibold tracking-widest text-brand-roseGold">
-                        Uso Exclusivo nos Canais da Marca
-                    </div>
-                </div>
-
-                <!-- Card 6: Embaixadora de Marca -->
-                <div class="group border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:bg-brand-lightPink/20 hover:border-brand-roseGoldLight/60 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="crown" class="w-6 h-6 text-brand-roseGold"></i>
-                        </div>
-                        <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Embaixadora de Marca</h3>
-                        <p class="text-zinc-500 text-sm font-light leading-relaxed">
-                            Parceria de longo prazo que cria forte associação de Nicole à marca, com cronograma regular e exclusivo de inserções estratégicas nos stories, feed e eventos.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-brand-nude text-xs uppercase font-semibold tracking-widest text-brand-roseGold">
-                        Máximo de Identificação & Parceria
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 7. INVESTIMENTOS (Tabela Elegante) -->
-    <section id="investimentos" class="py-24 bg-[#FAF5F0] relative">
-        <div class="max-w-5xl mx-auto px-6">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">Valores e Entregáveis</span>
-                <h2 class="font-editorial text-4xl md:text-5xl text-brand-charcoal">Tabela de Investimento</h2>
-                <p class="text-sm text-zinc-500 font-light">Contratações pontuais transparentes e focadas em alto desempenho criativo.</p>
-            </div>
-
-            <!-- Tabela Estilo Editorial -->
-            <div class="glass-panel rounded-3xl overflow-hidden border border-brand-roseGoldLight/30 shadow-lg fade-in-up">
-                
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-brand-charcoal text-white text-xs uppercase tracking-widest font-semibold">
-                                <th class="py-6 px-8">Formato de Serviço</th>
-                                <th class="py-6 px-6">Volume</th>
-                                <th class="py-6 px-6 text-right">Investimento</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-brand-nudeDark/30 text-sm">
-                            <tr class="hover:bg-brand-lightPink/30 transition-colors">
-                                <td class="py-6 px-8 font-medium font-editorial text-lg text-brand-charcoal">Sequência de Stories</td>
-                                <td class="py-6 px-6 text-zinc-500">3 Stories sequenciais (com link/cupom)</td>
-                                <td class="py-6 px-6 text-right font-semibold text-brand-roseGold text-base">R$ 350</td>
-                            </tr>
-                            <tr class="hover:bg-brand-lightPink/30 transition-colors bg-white/40">
-                                <td class="py-6 px-8 font-medium font-editorial text-lg text-brand-charcoal">Stories Premium</td>
-                                <td class="py-6 px-6 text-zinc-500">10 Stories explicativos/unboxings</td>
-                                <td class="py-6 px-6 text-right font-semibold text-brand-roseGold text-base">R$ 600</td>
-                            </tr>
-                            <tr class="hover:bg-brand-lightPink/30 transition-colors">
-                                <td class="py-6 px-8 font-medium font-editorial text-lg text-brand-charcoal">Reels Exclusivo</td>
-                                <td class="py-6 px-6 text-zinc-500">1 Vídeo em formato Reels + Áudio em alta</td>
-                                <td class="py-6 px-6 text-right font-semibold text-brand-roseGold text-base">R$ 750</td>
-                            </tr>
-                            <tr class="hover:bg-brand-lightPink/30 transition-colors bg-white/40">
-                                <td class="py-6 px-8 font-medium font-editorial text-lg text-brand-charcoal">Combo Foto Feed + Stories</td>
-                                <td class="py-6 px-6 text-zinc-500">1 Foto no Feed + 3 Stories sequenciais</td>
-                                <td class="py-6 px-6 text-right font-semibold text-brand-roseGold text-base">R$ 900</td>
-                            </tr>
-                            <tr class="hover:bg-brand-lightPink/30 transition-colors">
-                                <td class="py-6 px-8 font-medium font-editorial text-lg text-brand-charcoal">Combo Reels + Stories</td>
-                                <td class="py-6 px-6 text-zinc-500">1 Vídeo Reels + 3 Stories integrados</td>
-                                <td class="py-6 px-6 text-right font-semibold text-brand-roseGold text-base">R$ 1.100</td>
-                            </tr>
-                            <tr class="hover:bg-brand-lightPink/30 transition-colors bg-white/40">
-                                <td class="py-6 px-8 font-medium font-editorial text-lg text-brand-charcoal">Cobertura de Eventos</td>
-                                <td class="py-6 px-6 text-zinc-500">Presença VIP de até 3 horas + cobertura ao vivo</td>
-                                <td class="py-6 px-6 text-right font-semibold text-brand-roseGold text-base">R$ 800 <span class="text-xs text-zinc-400 font-normal">a</span> R$ 1.500</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="p-6 bg-brand-lightPink/20 text-center text-xs text-zinc-500 italic border-t border-brand-nude">
-                    * Todos os valores apresentados acima incluem a produção total de conteúdo de alta definição, roteiro aprovado previamente e entrega de relatório de métricas pós-campanha.
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 8. PLANOS MENSAIS (Foco de conversão - Recorrência) -->
-    <section id="planos" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">Consistência de Marca</span>
-                <h2 class="font-editorial text-4xl md:text-5xl text-brand-charcoal">Planos Mensais Recorrentes</h2>
-                <p class="text-sm text-zinc-500 font-light">Garanta presença consistente na rotina do público-alvo com contratos contínuos de no mínimo 3 meses.</p>
-            </div>
-
-            <!-- Grid de Planos -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Plano Bronze -->
-                <div class="border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:shadow-lg transition-all flex flex-col justify-between h-full">
-                    <div>
-                        <div class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mb-2">Plano Bronze</div>
-                        <div class="font-editorial text-3xl font-semibold text-brand-charcoal mb-4">R$ 500<span class="text-xs font-sans text-zinc-400">/mês</span></div>
-                        <hr class="border-brand-nude mb-6">
-                        <ul class="space-y-3 text-xs text-zinc-600">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 2 Sequências de Stories / mês</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Link de direcionamento fixo</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Cupom de desconto exclusivo</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Envio de métricas mensais</li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20tenho%20interesse%20no%20Plano%20Bronze%20Mensal." target="_blank"
-                           class="block w-full py-3 bg-white border border-brand-roseGold text-brand-roseGold hover:bg-brand-roseGold hover:text-white transition-all rounded-full text-center text-xs font-semibold uppercase tracking-wider">
-                            Contratar Bronze
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Plano Prata -->
-                <div class="border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:shadow-lg transition-all flex flex-col justify-between h-full">
-                    <div>
-                        <div class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mb-2">Plano Prata</div>
-                        <div class="font-editorial text-3xl font-semibold text-brand-charcoal mb-4">R$ 850<span class="text-xs font-sans text-zinc-400">/mês</span></div>
-                        <hr class="border-brand-nude mb-6">
-                        <ul class="space-y-3 text-xs text-zinc-600">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 3 Sequências de Stories / mês</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 1 Vídeo Reels exclusivo / mês</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Roteirização personalizada</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Cupom & Direcionamento</li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20tenho%20interesse%20no%20Plano%20Prata%20Mensal." target="_blank"
-                           class="block w-full py-3 bg-white border border-brand-roseGold text-brand-roseGold hover:bg-brand-roseGold hover:text-white transition-all rounded-full text-center text-xs font-semibold uppercase tracking-wider">
-                            Contratar Prata
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Plano Ouro (Destacado) -->
-                <div class="relative border-2 border-brand-roseGold p-8 rounded-3xl bg-[#FDFBF9] shadow-xl flex flex-col justify-between h-full transform lg:-translate-y-4">
-                    <!-- Selo de Mais Recomendado -->
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-roseGold text-white text-[10px] uppercase tracking-widest font-bold px-4 py-1.5 rounded-full shadow-md">
-                        Recomendado
-                    </div>
-                    <div>
-                        <div class="text-xs uppercase text-brand-roseGold tracking-wider font-bold mb-2">Plano Ouro</div>
-                        <div class="font-editorial text-4xl font-semibold text-brand-charcoal mb-4">R$ 1.500<span class="text-xs font-sans text-zinc-400">/mês</span></div>
-                        <hr class="border-brand-nude mb-6">
-                        <ul class="space-y-3 text-xs text-zinc-600">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 4 Sequências de Stories / mês</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 2 Vídeos Reels exclusivos / mês</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 1 Foto no Feed permanente</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Direcionamento, Cupom e Collab</li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20tenho%20interesse%20no%20Plano%20Ouro%20Mensal." target="_blank"
-                           class="block w-full py-3 bg-brand-roseGold text-white hover:bg-brand-charcoal transition-all rounded-full text-center text-xs font-semibold uppercase tracking-wider shadow-md">
-                            Contratar Ouro
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Plano Diamante -->
-                <div class="border border-brand-nude p-8 rounded-3xl bg-[#FDFBF9] hover:shadow-lg transition-all flex flex-col justify-between h-full">
-                    <div>
-                        <div class="text-xs uppercase text-zinc-400 tracking-wider font-semibold mb-2">Plano Diamante</div>
-                        <div class="font-editorial text-3xl font-semibold text-brand-charcoal mb-4">R$ 2.500<span class="text-xs font-sans text-zinc-400">/mês</span></div>
-                        <hr class="border-brand-nude mb-6">
-                        <ul class="space-y-3 text-xs text-zinc-600">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Stories Ilimitados (Consistente)</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 3 Vídeos Reels exclusivos / mês</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> 2 Fotos no Feed / Collab</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-roseGold"></i> Suporte de Roteiro e Envio semanal</li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20tenho%20interesse%20no%20Plano%20Diamante%20Mensal." target="_blank"
-                           class="block w-full py-3 bg-white border border-brand-roseGold text-brand-roseGold hover:bg-brand-roseGold hover:text-white transition-all rounded-full text-center text-xs font-semibold uppercase tracking-wider">
-                            Contratar Diamante
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 9. SIMULADOR DE CAMPANHAS INTERATIVO -->
-    <section id="simulador" class="py-24 bg-brand-lightPink/20 relative">
-        <div class="max-w-4xl mx-auto px-6">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">Cálculo Personalizado</span>
-                <h2 class="font-editorial text-4xl md:text-5xl text-brand-charcoal">Simule sua Campanha</h2>
-                <p class="text-sm text-zinc-500 font-light">Selecione as ações desejadas abaixo e monte seu orçamento sob medida com envio automático ao WhatsApp.</p>
-            </div>
-
-            <!-- Caixa do Simulador de Campanhas -->
-            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white shadow-xl">
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    
-                    <!-- Lado Esquerdo: Seleção de Serviços -->
-                    <div class="space-y-4">
-                        <h3 class="font-editorial text-2xl text-brand-charcoal pb-2 border-b border-brand-nude">Selecione as Ações</h3>
-                        
-                        <!-- Opção 1 -->
-                        <label class="flex items-start gap-4 p-3 rounded-2xl hover:bg-white/40 transition-colors cursor-pointer group">
-                            <input type="checkbox" class="service-checkbox mt-1 w-5 h-5 rounded accent-brand-roseGold" data-name="Sequência de Stories (3x)" data-price="350">
-                            <div>
-                                <span class="block text-sm font-semibold text-zinc-800 group-hover:text-brand-roseGold transition-colors">3 Stories Sequenciais</span>
-                                <span class="text-xs text-zinc-500">R$ 350,00</span>
-                            </div>
-                        </label>
-
-                        <!-- Opção 2 -->
-                        <label class="flex items-start gap-4 p-3 rounded-2xl hover:bg-white/40 transition-colors cursor-pointer group">
-                            <input type="checkbox" class="service-checkbox mt-1 w-5 h-5 rounded accent-brand-roseGold" data-name="Stories Premium (10x)" data-price="600">
-                            <div>
-                                <span class="block text-sm font-semibold text-zinc-800 group-hover:text-brand-roseGold transition-colors">Stories Premium (10x)</span>
-                                <span class="text-xs text-zinc-500">R$ 600,00</span>
-                            </div>
-                        </label>
-
-                        <!-- Opção 3 -->
-                        <label class="flex items-start gap-4 p-3 rounded-2xl hover:bg-white/40 transition-colors cursor-pointer group">
-                            <input type="checkbox" class="service-checkbox mt-1 w-5 h-5 rounded accent-brand-roseGold" data-name="Vídeo Reels Exclusivo" data-price="750">
-                            <div>
-                                <span class="block text-sm font-semibold text-zinc-800 group-hover:text-brand-roseGold transition-colors">Vídeo Reels</span>
-                                <span class="text-xs text-zinc-500">R$ 750,00</span>
-                            </div>
-                        </label>
-
-                        <!-- Opção 4 -->
-                        <label class="flex items-start gap-4 p-3 rounded-2xl hover:bg-white/40 transition-colors cursor-pointer group">
-                            <input type="checkbox" class="service-checkbox mt-1 w-5 h-5 rounded accent-brand-roseGold" data-name="Foto Feed + Stories" data-price="900">
-                            <div>
-                                <span class="block text-sm font-semibold text-zinc-800 group-hover:text-brand-roseGold transition-colors">Combo Foto Feed + Stories</span>
-                                <span class="text-xs text-zinc-500">R$ 900,00</span>
-                            </div>
-                        </label>
-
-                        <!-- Opção 5 -->
-                        <label class="flex items-start gap-4 p-3 rounded-2xl hover:bg-white/40 transition-colors cursor-pointer group">
-                            <input type="checkbox" class="service-checkbox mt-1 w-5 h-5 rounded accent-brand-roseGold" data-name="Reels + Stories" data-price="1100">
-                            <div>
-                                <span class="block text-sm font-semibold text-zinc-800 group-hover:text-brand-roseGold transition-colors">Combo Reels + Stories</span>
-                                <span class="text-xs text-zinc-500">R$ 1.100,00</span>
-                            </div>
-                        </label>
-
-                        <!-- Opção 6 -->
-                        <label class="flex items-start gap-4 p-3 rounded-2xl hover:bg-white/40 transition-colors cursor-pointer group">
-                            <input type="checkbox" class="service-checkbox mt-1 w-5 h-5 rounded accent-brand-roseGold" data-name="Cobertura de Evento" data-price="1000">
-                            <div>
-                                <span class="block text-sm font-semibold text-zinc-800 group-hover:text-brand-roseGold transition-colors">Cobertura de Evento (Média)</span>
-                                <span class="text-xs text-zinc-500">R$ 1.000,00</span>
-                            </div>
-                        </label>
-                    </div>
-
-                    <!-- Lado Direito: Resumo Dinâmico e Proposta -->
-                    <div class="bg-white/50 p-6 rounded-2xl border border-brand-nude flex flex-col justify-between h-full">
-                        <div>
-                            <h3 class="font-editorial text-2xl text-brand-charcoal pb-2 border-b border-brand-nude">Resumo da Campanha</h3>
-                            
-                            <!-- Lista de itens selecionados (atualizada via JS) -->
-                            <div id="simulated-items" class="py-4 space-y-2 text-xs text-zinc-600 min-h-[100px]">
-                                <p class="italic text-zinc-400">Nenhum serviço selecionado ainda.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between items-center py-4 border-t border-brand-nude">
-                                <span class="text-xs uppercase tracking-wider text-zinc-500 font-semibold">Valor Total:</span>
-                                <span id="simulated-total" class="font-editorial text-3xl font-semibold text-brand-roseGold">R$ 0,00</span>
-                            </div>
-
-                            <!-- Botão de Envio de Proposta -->
-                            <button id="send-proposal-btn" 
-                                    class="w-full py-4 bg-brand-roseGold text-white rounded-full font-semibold text-xs tracking-widest uppercase hover:bg-brand-charcoal transition-all shadow-md flex items-center justify-center gap-2">
-                                <i data-lucide="send" class="w-4 h-4"></i>
-                                Enviar para o WhatsApp
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- 11. CONTATO (Seção Final Sofisticada) -->
-    <section id="contato" class="py-24 bg-[#FAF5F0] relative overflow-hidden">
-        <div class="absolute -bottom-10 -left-10 w-96 h-96 bg-brand-lightPink/40 rounded-full blur-3xl -z-10"></div>
-        
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            
-            <div class="space-y-4 mb-12">
-                <span class="text-xs uppercase font-semibold tracking-widest text-brand-roseGold">Vamos Conversar?</span>
-                <h2 class="font-editorial text-5xl md:text-6xl text-brand-charcoal">Fale com Nicole Meira</h2>
-                <hr class="w-16 border-brand-roseGold mx-auto">
-                <p class="text-zinc-500 font-light max-w-lg mx-auto">Disponível para parcerias, licenciamento de imagem, palestras, presenças e projetos comerciais exclusivos.</p>
-            </div>
-
-            <!-- Cards de Contato Premium -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                
-                <!-- WhatsApp -->
-                <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20gostaria%20de%20conversar%20sobre%20uma%20campanha%20comercial." 
-                   target="_blank"
-                   class="glass-panel p-6 rounded-2xl border border-white hover:border-brand-roseGoldLight hover:-translate-y-1 transition-all flex flex-col items-center">
-                    <div class="w-10 h-10 rounded-full bg-[#25D366]/10 flex items-center justify-center mb-4">
-                        <i data-lucide="phone" class="w-5 h-5 text-[#25D366]"></i>
-                    </div>
-                    <span class="text-xs uppercase text-zinc-400 tracking-wider font-semibold">WhatsApp</span>
-                    <span class="text-sm font-medium text-brand-charcoal mt-1">+55 21 98289-8660</span>
-                </a>
-
-                <!-- Instagram -->
-                <a href="https://instagram.com/nicolemeira_oficial" 
-                   target="_blank"
-                   class="glass-panel p-6 rounded-2xl border border-white hover:border-brand-roseGoldLight hover:-translate-y-1 transition-all flex flex-col items-center">
-                    <div class="w-10 h-10 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-4">
-                        <i data-lucide="instagram" class="w-5 h-5 text-brand-roseGold"></i>
-                    </div>
-                    <span class="text-xs uppercase text-zinc-400 tracking-wider font-semibold">Instagram</span>
-                    <span class="text-sm font-medium text-brand-charcoal mt-1">@nicolemeira_oficial</span>
-                </a>
-
-                <!-- E-mail -->
-                <a href="mailto:contato@nicolemeira.com.br" 
-                   class="glass-panel p-6 rounded-2xl border border-white hover:border-brand-roseGoldLight hover:-translate-y-1 transition-all flex flex-col items-center">
-                    <div class="w-10 h-10 rounded-full bg-brand-roseGold/10 flex items-center justify-center mb-4">
-                        <i data-lucide="mail" class="w-5 h-5 text-brand-roseGold"></i>
-                    </div>
-                    <span class="text-xs uppercase text-zinc-400 tracking-wider font-semibold">E-mail Comercial</span>
-                    <span class="text-sm font-medium text-brand-charcoal mt-1 text-wrap">contato@nicolemeira.com.br</span>
-                </a>
-
-            </div>
-
-            <!-- Botão Gigante de Ação -->
-            <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20solicito%20um%20agendamento%20para%20planejamento%20de%20campanha." 
-               target="_blank"
-               class="inline-flex items-center gap-3 px-10 py-5 bg-brand-charcoal text-white rounded-full font-semibold text-xs tracking-widest uppercase hover:bg-brand-roseGold transition-all duration-300 shadow-xl">
-                Planejar Minha Campanha
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-
-        </div>
-    </section>
-
-    <!-- 12. RODAPÉ (FOOTER) -->
-    <footer class="bg-brand-charcoal text-white/70 py-16 text-sm border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-            
-            <!-- Identidade -->
-            <div class="space-y-4 text-center md:text-left">
-                <span class="font-editorial text-3xl tracking-widest text-white uppercase font-bold block">Nicole Meira</span>
-                <p class="text-xs text-white/50 tracking-wider uppercase">Estilo • Estética • Relevância Digital</p>
-                <p class="text-xs text-white/40">Preparado para www.nicolemeira.com.br</p>
-            </div>
-
-            <!-- Localização & Info -->
-            <div class="space-y-2 text-center text-xs">
-                <p class="text-white/60">Guarapuava - Paraná</p>
-                <p class="text-white/50">Disponibilidade de Viagem Nacional e Internacional</p>
-                <p class="text-brand-roseGoldLight font-semibold tracking-wider">@nicolemeira_oficial</p>
-            </div>
-
-            <!-- Direitos de Cópia e Links -->
-            <div class="space-y-4 text-center md:text-right text-xs">
-                <p class="text-white/40">Nicole Meira &copy; 2026. Todos os direitos reservados.</p>
-                <div class="flex justify-center md:justify-end space-x-6">
-                    <a href="#sobre" class="hover:text-white">Sobre</a>
-                    <a href="#metricas" class="hover:text-white">Métricas</a>
-                    <a href="#instagram" class="hover:text-white">Instagram</a>
-                    <a href="#contato" class="hover:text-white">Contato</a>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- BOTÃO FIXO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me/5521982898660?text=Olá%20Nicole,%20estava%20olhando%20seu%20Mídia%20Kit%20e%20gostaria%20de%20conversar." 
-       target="_blank"
-       aria-label="Fale conosco via WhatsApp"
-       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#20ba5a] transition-all duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.174 5.18 0 11.522 0c3.074.001 5.965 1.202 8.138 3.383 2.172 2.18 3.368 5.08 3.365 8.156-.003 6.345-5.18 11.519-11.523 11.519-.193 0-.387-.002-.58-.005h-.002L.057 24zm6.057-13.916c-.198-.124-.316-.367-.316-.624 0-.102.03-.2.08-.28.188-.306.495-.452.833-.452h.11c.143 0 .285.037.408.106.182.1.284.288.284.496s-.102.396-.284.496c-.123.07-.265.106-.408.106h-.11c-.247 0-.46-.118-.607-.252zm6.265-1.928c-.147-.134-.36-.252-.607-.252h-.11c-.143 0-.285.036-.408.106-.182.1-.284.288-.284.496s.102.396.284.496c.123.07.265.106.408.106h.11c.338 0 .645-.146.833-.452.05-.08.08-.178.08-.28 0-.257-.118-.5-.316-.624zm3.931 1.942c.114 0 .227-.015.338-.046.335-.092.593-.332.698-.65.048-.147.073-.301.073-.458 0-.31-.097-.604-.282-.843-.18-.232-.442-.383-.736-.425-.107-.015-.218-.023-.33-.023h-.103c-.27 0-.53.056-.77.168-.29.135-.522.368-.655.658-.047.1-.07.21-.07.317 0 .257.1.5.283.682.18.18.423.284.68.284h.102l.77-.168-.655.658c.24.112.5.168.77.168z"/>
-            <path d="M19.045 4.907C17.032 2.888 14.354 1.777 11.517 1.777 5.992 1.777 1.503 6.262 1.501 11.789c0 1.767.461 3.492 1.336 5.008l-1.42 5.185 5.304-1.392c1.464.798 3.111 1.218 4.793 1.219h.004c5.523 0 10.013-4.484 10.016-10.012.002-2.678-1.04-5.197-3.036-7.19zm-7.528 14.22h-.003c-1.498 0-2.967-.403-4.247-1.163l-.304-.18-3.15.826.84-3.072-.197-.314c-.832-1.324-1.272-2.86-1.271-4.437.002-4.664 3.799-8.459 8.468-8.459 2.26 0 4.385.882 5.983 2.482 1.597 1.6 2.476 3.728 2.474 5.99-.004 4.665-3.801 8.462-8.467 8.462zm4.636-6.331c-.253-.127-1.501-.741-1.733-.825-.233-.085-.403-.127-.572.127-.169.254-.655.825-.803.998-.148.172-.296.195-.549.068-.253-.127-1.07-.394-2.037-1.258-.753-.671-1.261-1.502-1.409-1.756-.148-.254-.016-.391.111-.518.115-.114.253-.296.38-.444.127-.148.17-.254.254-.423.085-.169.042-.317-.021-.444-.064-.127-.572-1.378-.783-1.886-.206-.497-.413-.429-.572-.437-.148-.008-.317-.008-.487-.008-.169 0-.444.064-.676.317-.233.254-.888.867-.888 2.115 0 1.248.908 2.453 1.035 2.623.127.169 1.787 2.729 4.329 3.824.604.261 1.077.417 1.444.534.608.193 1.162.166 1.6.101.488-.072 1.501-.613 1.712-1.206.212-.592.212-1.1.148-1.206-.063-.105-.233-.169-.486-.296z"/>
-        </svg>
-    </a>
-
-    <!-- SCRIPT DE INTERATIVIDADE E ANIMAÇÃO -->
-    <script>
-        // Inicializa ícones Lucide
-        lucide.createIcons();
-
-        // 1. Controle do Mobile Menu
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Efeito Scroll no Header para mudar opacidade e sombra
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-lg', 'bg-white/90');
-                header.classList.remove('bg-white/70');
-            } else {
-                header.classList.remove('shadow-lg', 'bg-white/90');
-                header.classList.add('bg-white/70');
-            }
-        });
-
-        // 2. Animação de Entrada ao Rolar a Tela (Fade In Up)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in-up').forEach(element => {
-            observer.observe(element);
-        });
-
-        // 3. Contadores Animados para Métricas
-        const startCounters = () => {
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                let current = 0;
-                const duration = 2000; // 2 segundos
-                const increment = target / (duration / 16); // ~60fps
-
-                const updateCount = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.innerText = Math.floor(current);
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-        };
-
-        // Ativa os contadores quando a seção de métricas entra na tela
-        const metricsSection = document.getElementById('metricas');
-        let animated = false;
-        const metricsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !animated) {
-                    startCounters();
-                    animated = true;
-                }
-            });
-        }, { threshold: 0.3 });
-
-        metricsObserver.observe(metricsSection);
-
-        // 4. Lógica do Simulador de Campanhas Interativo
-        const checkboxes = document.querySelectorAll('.service-checkbox');
-        const simulatedItemsDiv = document.getElementById('simulated-items');
-        const simulatedTotalSpan = document.getElementById('simulated-total');
-        const sendProposalBtn = document.getElementById('send-proposal-btn');
-
-        const updateSimulation = () => {
-            let total = 0;
-            let selectedServices = [];
-
-            checkboxes.forEach(checkbox => {
-                if (checkbox.checked) {
-                    const name = checkbox.getAttribute('data-name');
-                    const price = parseInt(checkbox.getAttribute('data-price'));
-                    total += price;
-                    selectedServices.push({ name, price });
-                }
-            });
-
-            // Atualiza exibição de Itens
-            if (selectedServices.length === 0) {
-                simulatedItemsDiv.innerHTML = '<p class="italic text-zinc-400">Nenhum serviço selecionado ainda.</p>';
-            } else {
-                simulatedItemsDiv.innerHTML = selectedServices.map(service => `
-                    <div class="flex justify-between items-center py-1 border-b border-brand-nude/35">
-                        <span>• ${service.name}</span>
-                        <span class="font-medium">R$ ${service.price},00</span>
-                    </div>
-                `).join('');
-            }
-
-            // Atualiza total
-            simulatedTotalSpan.innerText = `R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-        };
-
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateSimulation);
-        });
-
-        // Enviar Proposta Formatada via WhatsApp
-        sendProposalBtn.addEventListener('click', () => {
-            let total = 0;
-            let selectedServices = [];
-
-            checkboxes.forEach(checkbox => {
-                if (checkbox.checked) {
-                    selectedServices.push(checkbox.getAttribute('data-name'));
-                    total += parseInt(checkbox.getAttribute('data-price'));
-                }
-            });
-
-            if (selectedServices.length === 0) {
-                // Notificação de Erro elegante (Substituta do alert)
-                const errorToast = document.createElement('div');
-                errorToast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 glass-panel border border-red-200 text-red-700 px-6 py-4 rounded-xl shadow-lg z-50 text-xs tracking-wider uppercase font-semibold';
-                errorToast.innerText = 'Selecione ao menos 1 serviço para simular.';
-                document.body.appendChild(errorToast);
-                setTimeout(() => errorToast.remove(), 3000);
-                return;
-            }
-
-            // Monta mensagem codificada para URL do WhatsApp
-            const intro = `Olá Nicole! Montei meu pacote personalizado através do simulador do seu site:\n\n`;
-            const servicesList = selectedServices.map(s => `- ${s}`).join('\n');
-            const footerText = `\n\n*Valor Total Estimado:* R$ ${total},00\n\nGostaria de validar essa proposta e agendar as datas. Como procedemos?`;
-            
-            const fullMessage = encodeURIComponent(intro + servicesList + footerText);
-            const waUrl = `https://wa.me/5521982898660?text=${fullMessage}`;
-            
-            window.open(waUrl, '_blank');
-        });
-    </script>
 </body>
 </html>
-
-```
+File created successfully: /mnt/user-data/ outputs/nicole-meira-mediakit/index.html
